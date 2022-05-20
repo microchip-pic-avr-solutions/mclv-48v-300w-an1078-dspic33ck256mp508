@@ -3,11 +3,11 @@
    "category":"com.microchip.ide.project",
    "content":{
       "metaDataVersion":"1.3.0",
-      "name":"com.microchip.mplabx.project.lvmc-dspic33ck256mp508-an1078",
-      "version":"1.0.1",
-      "displayName":"AN1078 dspic33ck256mp508 LVMC",
-      "projectName":"lvmc-dspic33ck256mp508-an1078",
-      "shortDescription":"Sensorless Field Oriented Control of a PMSM with sliding mode observer",
+      "name":"com.microchip.mplabx.project.mclv-48v-300w-an1078",
+      "version":"x.x.x",
+      "displayName":"xxxxxxxxxxxxxxx",
+      "projectName":"mclv-48v-300w-an1078",
+      "shortDescription":"xxxxxxxxxxxxxxx",
       "ide":{
          "name":"MPLABX",
          "semverRange":">=5.40.0"
@@ -17,8 +17,8 @@
          "semverRange":"^1.50.0"
       },
       "dfp":{
-         "name":"dsPIC33CK-MP_DFP",
-         "semverRange":">=1.6.176"
+         "name":"xxxxxxxxxxxxxxx",
+         "semverRange":">=x.x.x"
       },
 	  "configurator": {
          "name": "MCC",
@@ -30,17 +30,16 @@
          "content":{
             "metaDataVersion":"1.0.0",
             "category":"com.microchip.device",
-            "name":"dsPIC33CK256MP508",
+            "name":"xxxxxxxxxxxxxxx",
             "versionRange":"*"
          }
       },
 	  "peripherals":[
-         "ADC",
-		 "PWM"
+         "GPIO",
       ],
       "keywords":[
-         "Motor Control",
-		 "PMSM"
+         "GPIO",
+         "UART"
       ]
    }
 }
