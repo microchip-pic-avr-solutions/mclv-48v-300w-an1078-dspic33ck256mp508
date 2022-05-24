@@ -42,7 +42,7 @@
 *******************************************************************************/
 
 
-#include "../library-x2cscope/X2CScope.h"
+#include "X2CScope.h"
 #include "uart1.h"
 #include <stdint.h>
 
