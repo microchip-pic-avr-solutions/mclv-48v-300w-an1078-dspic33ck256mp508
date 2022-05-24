@@ -19,18 +19,18 @@
         <itemPath>../hal/measure.h</itemPath>
       </logicalFolder>
       <logicalFolder name="library" displayName="library" projectFiles="true">
-        <logicalFolder name="mc-library" displayName="mc-library" projectFiles="true">
-          <itemPath>../library/mc-library/motor_control.h</itemPath>
-          <itemPath>../library/mc-library/motor_control_declarations.h</itemPath>
-          <itemPath>../library/mc-library/motor_control_dsp.h</itemPath>
-          <itemPath>../library/mc-library/motor_control_inline_declarations.h</itemPath>
-          <itemPath>../library/mc-library/motor_control_inline_dspic.h</itemPath>
-          <itemPath>../library/mc-library/motor_control_inline_internal.h</itemPath>
-          <itemPath>../library/mc-library/motor_control_types.h</itemPath>
-          <itemPath>../library/mc-library/motor_control_util.h</itemPath>
+        <logicalFolder name="mc-library" displayName="motor" projectFiles="true">
+          <itemPath>../library/library-motor/motor_control.h</itemPath>
+          <itemPath>../library/library-motor/motor_control_declarations.h</itemPath>
+          <itemPath>../library/library-motor/motor_control_dsp.h</itemPath>
+          <itemPath>../library/library-motor/motor_control_inline_declarations.h</itemPath>
+          <itemPath>../library/library-motor/motor_control_inline_dspic.h</itemPath>
+          <itemPath>../library/library-motor/motor_control_inline_internal.h</itemPath>
+          <itemPath>../library/library-motor/motor_control_types.h</itemPath>
+          <itemPath>../library/library-motor/motor_control_util.h</itemPath>
         </logicalFolder>
         <logicalFolder name="x2cscope" displayName="x2cscope" projectFiles="true">
-          <itemPath>../library/x2cscope/X2CScope.h</itemPath>
+          <itemPath>../library/library-x2cscope/X2CScope.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../control.h</itemPath>
@@ -62,10 +62,6 @@
         <itemPath>../hal/cmp.c</itemPath>
         <itemPath>../hal/measure.c</itemPath>
       </logicalFolder>
-      <logicalFolder name="lib" displayName="lib" projectFiles="true">
-        <logicalFolder name="f1" displayName="motor_control" projectFiles="true">
-        </logicalFolder>
-      </logicalFolder>
       <itemPath>../pmsm.c</itemPath>
       <itemPath>../smcpos.c</itemPath>
       <itemPath>../fdweak.c</itemPath>
@@ -89,13 +85,13 @@
         <targetDevice>dsPIC33CK256MP508</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>pk4hybrid</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC16</languageToolchain>
-        <languageToolchainVersion>1.70</languageToolchainVersion>
+        <languageToolchainVersion>2.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="dsPIC33CK-MP_DFP" vendor="Microchip" version="1.4.102"/>
+        <pack name="dsPIC33CK-MP_DFP" vendor="Microchip" version="1.8.224"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -127,6 +123,7 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <C30>
+        <property key="cast-align" value="false"/>
         <property key="code-model" value="default"/>
         <property key="const-model" value="default"/>
         <property key="data-model" value="default"/>
@@ -143,7 +140,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="expand-pragma-config" value="false"/>
         <property key="extra-include-directories"
-                  value="..\;..\hal;..\lib;..\lib\motor_control;..\diagnostics"/>
+                  value="..\;..\hal;..\diagnostics;..\library\library-motor;..\library\library-x2cscope"/>
         <property key="isolate-each-function" value="false"/>
         <property key="keep-inline" value="false"/>
         <property key="oXC16gcc-align-arr" value="false"/>
@@ -163,7 +160,7 @@
         <property key="optimization-level" value="0"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
-        <property key="preprocessor-macros" value="MCLV2"/>
+        <property key="preprocessor-macros" value=""/>
         <property key="scalar-model" value="default"/>
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
@@ -174,8 +171,7 @@
       <C30-AS>
         <property key="assembler-symbols" value=""/>
         <property key="expand-macros" value="false"/>
-        <property key="extra-include-directories-for-assembler"
-                  value="..\lib;..\;..\lib\motor_control"/>
+        <property key="extra-include-directories-for-assembler" value="..\"/>
         <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="false-conditionals" value="false"/>
         <property key="keep-locals" value="false"/>
@@ -242,6 +238,7 @@
         <property key="warn-section-align" value="false"/>
       </C30-LD>
       <C30Global>
+        <property key="combine-sourcefiles" value="false"/>
         <property key="common-include-directories" value=""/>
         <property key="dual-boot-partition" value="0"/>
         <property key="fast-math" value="false"/>
@@ -403,9 +400,12 @@
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="ToolFirmwareToolPack"
                   value="Press to select which tool pack to use"/>
+        <property key="communication.activationmode" value="nohv"/>
         <property key="communication.interface" value=""/>
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="communication.speed" value="${communication.speed.default}"/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="debugoptions.simultaneous.debug" value="false"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="freeze.timers" value="false"/>
@@ -430,8 +430,14 @@
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
                   value="D:/AN1078/AN1078_dsPIC33CK256MP508_LVMC_SingleShunt/pmsm.X/debug/LVMC/pmsm_ptg"/>
+        <property key="programmerToGoImageName" value="pmsm_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.ledbrightness" value="5"/>
+        <property key="programoptions.pgcconfig" value="pull down"/>
+        <property key="programoptions.pgcresistor.value" value="4.7"/>
+        <property key="programoptions.pgdconfig" value="pull down"/>
+        <property key="programoptions.pgdresistor.value" value="4.7"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
         <property key="programoptions.pgmspeed" value="Med"/>
         <property key="programoptions.preservedataflash" value="false"/>
@@ -442,11 +448,15 @@
         <property key="programoptions.preserveprogram.ranges" value=""/>
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.program.otpconfig" value="false"/>
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
         <property key="programoptions.usehighvoltageonmclr" value="false"/>
         <property key="programoptions.uselvpprogramming" value="false"/>
+        <property key="programoptionsedbg.eraseb4program" value="true"/>
+        <property key="ptgProgramImage" value="true"/>
+        <property key="ptgSendImage" value="true"/>
         <property key="toolpack.updateoptions"
                   value="toolpack.updateoptions.uselatestoolpack"/>
         <property key="toolpack.updateoptions.packversion"
@@ -516,11 +526,14 @@
         <property key="ToolFirmwareToolPack"
                   value="Press to select which tool pack to use"/>
         <property key="communication.activationmode" value="nohv"/>
-        <property key="communication.interface"
-                  value="${communication.interface.default}"/>
+        <property key="communication.interface" value=""/>
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="communication.speed" value="${communication.speed.default}"/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="debugoptions.simultaneous.debug" value="false"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="freeze.timers" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
@@ -535,8 +548,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-2beff"/>
         <property key="poweroptions.powerenable" value="false"/>
-        <property key="programmerToGoFilePath"
-                  value="D:/MC_Projects/AN1078/branches/AN1078_dsPIC33CK256MP508_EXT_INT_OPAMP_MCLV2_MCHV2_MCHV3/pmsm.X/debug/MCLV2/pmsm_ptg"/>
         <property key="programmerToGoImageName" value="pmsm_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
@@ -555,10 +566,10 @@
         <property key="programoptions.preserveprogram.ranges" value=""/>
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.program.otpconfig" value="false"/>
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="programoptionsedbg.eraseb4program" value="true"/>
         <property key="ptgProgramImage" value="true"/>
         <property key="ptgSendImage" value="true"/>
         <property key="toolpack.updateoptions"
