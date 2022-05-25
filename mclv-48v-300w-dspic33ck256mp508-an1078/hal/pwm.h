@@ -69,11 +69,11 @@
 // MC PWM MODULE Related Definitions
 #define PWM_PDC1      PG1DC
 #define PWM_PDC2      PG2DC
-#define PWM_PDC3      PG4DC
+#define PWM_PDC3      PG3DC
 
 #define PWM_PHASE1    PG1PHASE 
 #define PWM_PHASE2    PG2PHASE
-#define PWM_PHASE3    PG4PHASE  
+#define PWM_PHASE3    PG3PHASE  
         
 #define PWM_TRIGA     PG1TRIGA 
 #define PWM_TRIGB     PG1TRIGB   
@@ -98,7 +98,7 @@
 #define BOOTSTRAP_CHARGING_COUNTS (uint16_t)((BOOTSTRAP_CHARGING_TIME_SECS/LOOPTIME_SEC )* 2)
 
 // Definition to enable or disable PWM Fault
-#define ENABLE_PWM_FAULT
+#undef ENABLE_PWM_FAULT
 
 #define DDEADTIME               (uint16_t)(DEADTIME_MICROSEC*FOSC_MHZ)
 // loop time in terms of PWM clock period
