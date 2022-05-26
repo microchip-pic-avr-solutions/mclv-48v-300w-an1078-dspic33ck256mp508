@@ -66,27 +66,27 @@
 // *****************************************************************************
 // *****************************************************************************
 // ADC MODULE Related Definitions
-#define ADCBUF_IPHASE1    -ADCBUF0
-#define ADCBUF_IPHASE2    -ADCBUF1
-#define ADCBUF_IBUS       ADCBUF4  
+#define ADCBUF_IPHASE1    -ADCBUF1
+#define ADCBUF_IPHASE2    -ADCBUF4
+#define ADCBUF_IBUS       ADCBUF0  
         
-#define ADCBUF_SPEED_REF      ADCBUF11
+#define ADCBUF_SPEED_REF      ADCBUF17
 #define ADCBUF_VBUS           ADCBUF15
-#define ADCBUF_MOSFET_TEMP    ADCBUF12
+#define ADCBUF_MOSFET_TEMP    ADCBUF18
         
 
 #ifdef SINGLE_SHUNT       
- #define EnableADCInterrupt()   _ADCAN4IE = 1
- #define DisableADCInterrupt()  _ADCAN4IE = 0
- #define ClearADCIF()           _ADCAN4IF = 0
- #define ClearADCIF_ReadADCBUF() ADCBUF4        
- #define _ADCInterrupt _ADCAN4Interrupt  
+ #define EnableADCInterrupt()   _ADCAN0IE = 1
+ #define DisableADCInterrupt()  _ADCAN0IE = 0
+ #define ClearADCIF()           _ADCAN0IF = 0
+ #define ClearADCIF_ReadADCBUF() ADCBUF0     
+ #define _ADCInterrupt _ADCAN0Interrupt  
 #else
- #define EnableADCInterrupt()   _ADCAN11IE = 1
- #define DisableADCInterrupt()  _ADCAN11IE = 0
- #define ClearADCIF()           _ADCAN11IF = 0
- #define ClearADCIF_ReadADCBUF() ADCBUF11        
- #define _ADCInterrupt _ADCAN11Interrupt  
+ #define EnableADCInterrupt()   _ADCAN17IE = 1
+ #define DisableADCInterrupt()  _ADCAN17IE = 0
+ #define ClearADCIF()           _ADCAN17IF = 0
+ #define ClearADCIF_ReadADCBUF() ADCBUF17        
+ #define _ADCInterrupt _ADCAN17Interrupt  
 #endif      
 // *****************************************************************************
 // *****************************************************************************

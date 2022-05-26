@@ -195,9 +195,9 @@ void EnablePWMOutputs(void)
 {
     //PWM controls signals in complementary mode, over-ride disabled
 	// 0 = PWM Generator provides data for the PWM4H pin
-    PG4IOCONLbits.OVRENH = 0; 
+    PG3IOCONLbits.OVRENH = 0; 
     // 0 = PWM Generator provides data for the PWM4L pin
-    PG4IOCONLbits.OVRENL = 0; 
+    PG3IOCONLbits.OVRENL = 0; 
     
     // 0 = PWM Generator provides data for the PWM2H pin
     PG2IOCONLbits.OVRENH = 0;
@@ -214,16 +214,16 @@ void DisablePWMOutputs(void)
 {
     /** Set Override Data on all PWM outputs */
     // 0b00 = State for PWM4H,L, if Override is Enabled
-    PG4IOCONLbits.OVRDAT = 0;
+    PG3IOCONLbits.OVRDAT = 0;
     // 0b00 = State for PWM2H,L, if Override is Enabled
     PG2IOCONLbits.OVRDAT = 0; 
     // 0b00 = State for PWM1H,L, if Override is Enabled
     PG1IOCONLbits.OVRDAT = 0;  
     
     // 1 = OVRDAT<1> provides data for output on PWM4H
-    PG4IOCONLbits.OVRENH = 1; 
+    PG3IOCONLbits.OVRENH = 1; 
     // 1 = OVRDAT<0> provides data for output on PWM4L
-    PG4IOCONLbits.OVRENL = 1; 
+    PG3IOCONLbits.OVRENL = 1; 
     
     // 1 = OVRDAT<1> provides data for output on PWM2H
     PG2IOCONLbits.OVRENH = 1;
@@ -242,7 +242,7 @@ void ClearPWMPCIFault(void)
        A write of ?1? to this location will produce a termination event*/
     PG1FPCILbits.SWTERM = 1;
     PG2FPCILbits.SWTERM = 1;
-    PG4FPCILbits.SWTERM = 1;
+    PG3FPCILbits.SWTERM = 1;
 }
 
 /*PWM Mode 4 - Center-Aligned Mode for Dual Shunt operation

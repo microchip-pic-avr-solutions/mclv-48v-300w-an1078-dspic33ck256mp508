@@ -63,10 +63,10 @@
 // *****************************************************************************
 // Digital I/O definitions
 // Push button Switches
-// SW#1 - RE11
-#define SW1                   PORTEbits.RE11
-// SW#2: RE12
-#define SW2                   PORTEbits.RE12
+// SW#1 - RE10
+#define SW1                   PORTEbits.RE10
+// SW#2: RE11
+#define SW2                   PORTEbits.RE11
 
 // SW#1 - Used as START/STOP button of Motor
 #define BUTTON_START_STOP        SW1
@@ -74,10 +74,10 @@
 #define BUTTON_SPEED_HALF_DOUBLE      SW2
 
 // Debug LEDs
-// LED2(LD11) : RE7
-#define LED2                    LATEbits.LATE7
-// LED1(LD10) : RE6
-#define LED1                    LATEbits.LATE6
+// LED2(LD11) : RE13
+#define LED2                    LATEbits.LATE13
+// LED1(LD10) : RE12
+#define LED1                    LATEbits.LATE12
 
 // *****************************************************************************
 // *****************************************************************************
