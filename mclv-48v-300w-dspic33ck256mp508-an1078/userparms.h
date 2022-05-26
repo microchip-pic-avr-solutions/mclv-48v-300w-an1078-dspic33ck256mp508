@@ -88,7 +88,7 @@ controllers, tuning mode will disable the speed PI controller */
 #define SINGLE_SHUNT  
     
 /* undef to work with External Op-Amp*/
-#undef INTERNAL_OPAMP_CONFIG
+#define INTERNAL_OPAMP_CONFIG
 
 /****************************** Motor Parameters ******************************/
 /********************  support xls file definitions begin *********************/
