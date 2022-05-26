@@ -78,7 +78,7 @@ constant slope. The slope is determined by TUNING_DELAY_RAMPUP constant.
 
 /* open loop continuous functioning */
 /* closed loop transition disabled  */
-#define OPEN_LOOP_FUNCTIONING
+#undef OPEN_LOOP_FUNCTIONING
 
 /* Definition for torque mode - for a separate tuning of the current PI
 controllers, tuning mode will disable the speed PI controller */
@@ -88,7 +88,7 @@ controllers, tuning mode will disable the speed PI controller */
 #define SINGLE_SHUNT  
     
 /* undef to work with External Op-Amp*/
-#define INTERNAL_OPAMP_CONFIG
+#undef INTERNAL_OPAMP_CONFIG
 
 /****************************** Motor Parameters ******************************/
 /********************  support xls file definitions begin *********************/

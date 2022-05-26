@@ -163,7 +163,7 @@ void CMP1_Initialize(void)
        010 = CMPxC input pin
        001 = CMPxB input pin
        000 = CMPxA input pin
-    Comparator Input source in LVMC board : IBUS_FILT_EXT - DACOUT1/AN3/CMP1C/RA3 */
+    Comparator Input source in MCLV board : IBUS_FILT_EXT - DACOUT1/AN3/CMP1C/RA3 */
     DAC1CONLbits.INSEL = 2;   
     /** Comparator Hysteresis Polarity Select bit
         1 = Hysteresis is applied to the falling edge of comparator output
