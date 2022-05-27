@@ -9,7 +9,7 @@
 pipeline {
     agent {
         kubernetes {
-            inheritFrom 'mclv-48v-300w-an1078-github-deployment'
+           
             defaultContainer 'xc16-mplabx-sonar-fmpp-python'
             yamlFile '.citd/cloudprovider.yml'
         }
@@ -42,8 +42,8 @@ pipeline {
             ----------------------------
             1. GITHUB_PAGES_NONE         ( Branch: None, index file path: None )
             2. GITHUB_PAGES_MASTER_ROOT  ( Branch: Master, index file path: /root )
-            3. GITHUB_PAGES_MASTER_DOCS  ( Branch: Master, index file path: /Docs ) 
-            4. GITHUB_PAGES_DEVELOP_ROOT ( Branch: Develop, index file path: /root )
+            3. GITHUB_PAGES_MASTER_DOCS  ( Branch: Develop, index file path: /Docs ) 
+            4. GITHUB_PAGES_DEVELOP_ROOT ( Branch: Master, index file path: /root )
             5. GITHUB_PAGES_DEVELOP_DOCS ( Branch: Develop, index file path: /Docs )
         */
         GITHUB_PAGES = 'GITHUB_PAGES_NONE'    
@@ -106,24 +106,7 @@ pipeline {
                     validateMetaData(
                         unapprovedKeywordsOverrideList: "${UNAPPROVED_KEYWORDS_OVERRIDE_LIST}"
                     )
-                }
-            }
-        } 
-        
-        // Creating tag in Bitbucket repo
-        stage('Bitbucket Tag Creation') {
-            when {
-                anyOf {
-                    allOf {
-                        not { changeRequest() }
-                        anyOf {branch 'master';}
-                    }
-                }
-            }
-            
-            steps {
-               script {
-                    bitbucketTagCreation()
+  
                 }
             }
         }
