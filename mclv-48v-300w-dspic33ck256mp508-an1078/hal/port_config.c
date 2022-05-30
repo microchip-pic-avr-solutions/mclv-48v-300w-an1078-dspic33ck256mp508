@@ -165,15 +165,15 @@ void MapGPIOHWFunction(void)
     // Configure Port pins for Motor Current Sensing
     // Ia Out
     ANSELBbits.ANSELB2 = 1;
-    TRISBbits.TRISB2 = 1;   //Pin 41: OA2OUT/AN1/AN7/ANA0/CMP1D/CMP2D/CMP3D/RP34/SCL3/INT0/RB2 
+    TRISBbits.TRISB2 = 0;   //Pin 41: OA2OUT/AN1/AN7/ANA0/CMP1D/CMP2D/CMP3D/RP34/SCL3/INT0/RB2 
     
     //Ib Out
     ANSELAbits.ANSELA4 = 1;
-    TRISAbits.TRISA4 = 1;   //Pin 23: OA3OUT/AN4/CMP3B/IBIAS3/RA4   
+    TRISAbits.TRISA4 = 0;   //Pin 23: OA3OUT/AN4/CMP3B/IBIAS3/RA4   
     
     //Ibus Out
     ANSELAbits.ANSELA0 = 1;
-    TRISAbits.TRISA0 = 1;   // Pin 16: OA1OUT/AN0/CMP1A/IBIAS0/RA0
+    TRISAbits.TRISA0 = 0;   // Pin 16: OA1OUT/AN0/CMP1A/IBIAS0/RA0
 
 #ifdef INTERNAL_OPAMP_CONFIG     
     //Ia-
