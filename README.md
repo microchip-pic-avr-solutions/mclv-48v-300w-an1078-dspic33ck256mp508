@@ -7,7 +7,7 @@
 This document describes the setup requirements for running the Sensor-less FOC algorithm with a Sliding Mode Observer, which is referenced in AN1078 “Sensorless Field Oriented Control of a PMSM” and to implement three phase currents reconstruction algorithm using DC bus Current,which is referenced in AN1299“Single-Shunt Three-Phase Current Reconstruction Algorithm for
 Sensorless FOC of a PMSM” using a MCLV-48V-300W Inverter Board and dsPIC33CK512MP508 Motor Control Dual In-line Module (DIM).</p>
 <p style='text-align: justify;'>
-The demonstration is configured to run on the MCLV-48V-300W Inverter Board and dsPIC33CH512MP508 Motor Control Dual In-line Module (DIM) in both Internal and External Op Amp configuration with the dsPIC33CK256MP508.
+The demonstration is configured to run on the MCLV-48V-300W Inverter Board and dsPIC33CK256MP508 Motor Control Dual In-line Module (DIM) in both Internal and External Op Amp configuration with the dsPIC33CK256MP508.
 </p>
 
 ## FIELD ORIENTED CONTROL (FOC)
@@ -29,7 +29,7 @@ To clone or download this application from Github, go to the [main page of this 
 >The software used for testing the firmware prior to release is listed above. It is recommended to use the version listed above or later versions for building the firmware.
 ## Hardware Tools Required for the Demonstration
 - MCLV-48V-300W Inverter Board, Part-No. [EV18H47A]
-- 	dsPIC33CH512MP508 Motor Control DIM, Part-No. [EV76L31A]
+- 	dsPIC33CK256MP508 Motor Control DIM, Part-No. [EV76L31A]
 - 24V Power Supply, Part-No. [AC002013](https://www.microchipdirect.com/dev-tools/AC002013)
 - 24V 3-Phase Brushless DC Motor, Part-No. [AC300020](https://www.microchip.com/en-us/development-tool/AC300020)
   <br />
@@ -40,8 +40,8 @@ To clone or download this application from Github, go to the [main page of this 
 <p style='text-align: justify;'>This section describes hardware setup required for the demonstration. Motor phase current feed-backs needed by the firmware are amplified by the operational amplifiers.</p>
 <p style='text-align: justify;'>
 If the amplifiers that are internal to the dsPIC33CK256MP508 are used, then that configuration is called internal amplifier configuration. If external amplifiers are used, then that configuration is called as external amplifier configuration.</p>
-
-1. <p style='text-align: justify;'>Perform the following modifications based upon amplifier configuration. By default, Board is configured for Internal OP-AMP Configuration.</p>
+<p style='text-align: justify;'>
+1. Perform the following modifications based upon amplifier configuration. By default, Board is configured for Internal OP-AMP Configuration.</p>
 
 
     - For running the motor in internal op amp configuration make sure that resistors R9, R29, R14 are populated and R6, R25, R10 are unpopulated on the DIM. Also ensure internal amplifiers are configured and enabled.
@@ -74,7 +74,7 @@ If the amplifiers that are internal to the dsPIC33CK256MP508 are used, then that
  <p align = "center"><font size="2"> Figure 3  MCLV-48V-300W Power Supply Connector
  </p>
 <p style='text-align: justify;'>
- 6.	The board has an onboard programmer ‘PICKIT™ On Board (PKOBv4)”, which can be used for programming or debugging the dsPIC33CK502MP508. To use an on-board programmer, connect a micro-USB cable between Host PC and Connector J16 provided on the MCLV-48V-300W Inverter Board.</p>
+ 6.	The board has an onboard programmer ‘PICKIT™ On Board (PKOBv4)”, which can be used for programming or debugging the dsPIC33CK256MP508. To use an on-board programmer, connect a micro-USB cable between Host PC and Connector J16 provided on the MCLV-48V-300W Inverter Board.</p>
 
 
 <p align="center">
