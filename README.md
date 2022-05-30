@@ -1,6 +1,6 @@
 ![image](images/microchip.jpg) 
 
-#MCLV-48V-300W dsPIC33CK256MP508 AN1078
+## MCLV-48V-300W dsPIC33CK256MP508 AN1078
 
 ## INTRODUCTION
 <p style='text-align: justify;'>
@@ -53,7 +53,7 @@ If the amplifiers that are internal to the dsPIC33CK256MP508 are used, then that
 3. Insert the dsPIC33CH512MP508 Motor Control DIM into the DIM Interface Connector J8 pro-vided on the MCLV-48V-300W Inverter Board. Make sure the DIM is placed correctly and ori-ented before going ahead.
 
 <p align="center">
-  <img  src="images/dimconnected.png"></p>
+  <img  src="images/dimconnected.PNG"></p>
  <p align = "center"><font size="2"> Figure 1  MCLV-48V-300W Board connected to DIM 
 
  4. Connect the three phase wires from the motor to PHA, PHB, and PHC terminals of connector J14(there is no specific order), provided on the MCLV-48V-300W Inverter Board.
@@ -86,7 +86,7 @@ If the amplifiers that are internal to the dsPIC33CK256MP508 are used, then that
 
 
 <p align="center">
-  <img  src="images/mclvprogramming.png"></p>
+  <img  src="images/mclvprogramming.PNG"></p>
  <p align = "center"><font size="2"> Figure 5  MCLV-48V-300W Inverter Board Programming Connector
 </p> 
 <br />
@@ -187,14 +187,14 @@ Follow below instructions step by step to setup and run the motor control demo a
 
         <p align="center">
         <img  src="images/mclvconfig.png"></p>
-        <p align = "center"><font size="2"> Figure 12  Project Properties settings
+        <p align = "center"><font size="2"> Figure 13  Project Properties settings
         </p>
 
 7. <p style='text-align: justify;'>	To build the project (in this case pmsm.X) and program the device dsPIC33CK256MP508, click “Make and Program Device Main project” on the toolbar.</p>
 
   <p align="center">
   <img  src="images/deviceprogramming.png"></p>
- <p align = "center"><font size="2"> Figure 13  Device Programming
+ <p align = "center"><font size="2"> Figure 14  Device Programming
 </p>
   
 8. <p style='text-align: justify;'>		If the device is successfully programmed, LD10 (‘LED1) will be turned ON, indicating that the dsPIC® DSC is enabled.</p> 
@@ -203,14 +203,14 @@ Follow below instructions step by step to setup and run the motor control demo a
 
   <p align="center">
   <img  src="images/pushbuttons.png"></p>
- <p align = "center"><font size="2"> Figure 14  Push buttons
+ <p align = "center"><font size="2"> Figure 15  Push buttons
 </p>
  
 10. <p style='text-align: justify;'>	If desired, the motor speed can be varied using the potentiometer (labeled “POT1”).</p>
 
   <p align="center">
   <img  src="images/potentiometer.png"></p>
- <p align = "center"><font size="2"> Figure 15  Potentiometer
+ <p align = "center"><font size="2"> Figure 16  Potentiometer
 </p>
  
 11.	<p style='text-align: justify;'>To enter the extended speed range (NOMINAL_SPEED_RPM to MAXIMUM_SPEED_RPM) press the push button SW2. Press the push button SW2 again to revert the speed of the motor to its normal speed (END_SPEED_RPM to NOMINAL_SPEED_RPM) range. </p>
@@ -225,7 +225,7 @@ The application firmware comes with initialization required to interface Control
 
 1. Ensure X2C Scope Plug-in is installed. For additional information on how to set up a plug-in refer https://microchipdeveloper.com/mplabx:tools-plugins-available
 
-2. <p style='text-align: justify;'>To utilize X2C communication for this demonstration, a micro-USB connection is required between Host PC and dsPIC33CK MCLV-48V-300W Inverter Board. PKoB 4 Connector J13 can be used to communicate between Host PC and dsPIC33CK MCLV-48V-300W Inverter Board, alternatively Connect a micro-USB cable from your computer to the J6 connector of the dsPIC33CK MCLV-48V-300W Inverter Board.</p>
+2. <p style='text-align: justify;'>	To utilize X2C communication for this demonstration, connect a micro-USB cable between the Host PC and the micro-USB connector provided on the MCLV-48V-300W Inverter Board. This interface is used for programming as well.</p>
 
 
 3.	<p style='text-align: justify;'>Ensure application is configured and running as described under Section Basic Demonstration by following steps 1 through 12.</p>
