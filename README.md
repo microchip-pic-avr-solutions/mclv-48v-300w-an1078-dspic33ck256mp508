@@ -19,7 +19,7 @@ PMSM needs accurate info about rotor flux angle (position). This can be achieved
 ## Hardware Connection and Running the Demo Code
 
 ## Motor Control Application Firmware Required for the Demonstration
-To clone or download this application from Github, go to the [main page of this repository](https://github.com/microchip-pic-avr-solutions/lvmc-dspic33ck256mp508-an1078) and then click Clone button to clone this repository or download as zip file.
+To clone or download this application from Github, go to the [main page of this repository](https://github.com/microchip-pic-avr-solutions/mclv-48v-300w-an1078) and then click Clone button to clone this repository or download as zip file.
 
 ## Software Tools Used for Testing the firmware
 - MPLAB® X IDE v5.50 or later
@@ -43,9 +43,8 @@ If the amplifiers that are internal to the dsPIC33CK256MP508 are used, then that
 
 1. <p style='text-align: justify;'>Perform the following modifications based upon amplifier configuration. By default, Board is configured for Internal OP-AMP Configuration.</p>
 
-    - For running the motor in internal op amp configuration make sure that resistors R125, R133, R141 are populated and R121, R129, R137 are unpopulated. Also ensure internal amplifiers are configured and enabled.
-    - For running the motor in external amp configuration make sure that resistors R121, 
-      R129, R137 are populated and R125, R133, R141 are unpopulated. Also disable internal amplifiers in the firmware.
+    - For running the motor in internal op amp configuration make sure that resistors R9, R29, R14 are populated and R6, R25, R10 are unpopulated on the DIM. Also ensure internal amplifiers are configured and enabled.
+    - For running the motor in external amp configuration make sure that resistors R6, R25, R10  are populated and  R9, R29, R14 on the  DIM are unpopulated. Also disable internal amplifiers in the firmware.
 
 
 2. Motor currents are amplified on the MCLV-48V-300W Inverter Board. The firmware and DIM are configured to sample and convert external amplifier outputs to measure the motor currents needed to implement FOC.</p> 
@@ -179,9 +178,9 @@ Follow below instructions step by step to setup and run the motor control demo a
  <p align = "center"><font size="2"> Figure 12  Single Shunt Configuration
 </p>
   
-6. <p style='text-align: justify;'>Right click on the project pmsm.X and select “Properties” to open its Project Properties Dialog. Click the “Conf: [MCLV]” category to reveal the general project configuration information.</p>
+6. <p style='text-align: justify;'>Right click on the project pmsm.X and select “Properties” to open its Project Properties Dialog.</p>
 
-    In the ‘Conf: [MCLV3]’ category window: 
+    In the ‘Conf: [default]’ category window: 
     - Select the specific Compiler Toolchain from the available list of compilers. Please ensure MPLAB® XC16 Compiler supports the device dsPIC33CK256MP508. In this case “XC16(v1.70)” is selected. The compiler used for testing the firmware is listed in the section Software Tools Used for Testing the firmware.
     - Select the Hardware Tool to be used for programming and debugging. In this case, “MPLAB PKoB 4” is the selected programmer.
     - After selecting Hardware Tool and Compiler Toolchain, click button Apply
@@ -228,10 +227,6 @@ The application firmware comes with initialization required to interface Control
 
 2. <p style='text-align: justify;'>To utilize X2C communication for this demonstration, a micro-USB connection is required between Host PC and dsPIC33CK MCLV-48V-300W Inverter Board. PKoB 4 Connector J13 can be used to communicate between Host PC and dsPIC33CK MCLV-48V-300W Inverter Board, alternatively Connect a micro-USB cable from your computer to the J6 connector of the dsPIC33CK MCLV-48V-300W Inverter Board.</p>
 
- <p align="center">
-  <img  src="images/x2cinterface.png"></p>
- <p align = "center"><font size="2"> Figure 16  X2C Interface
-</p>
 
 3.	<p style='text-align: justify;'>Ensure application is configured and running as described under Section Basic Demonstration by following steps 1 through 12.</p>
 
@@ -332,6 +327,7 @@ For additional information, refer following documents or links.
 6. MPLAB® X IDE User’s Guide (DS50002027) or MPLAB® X IDE help
 7. MPLAB® X IDE installation
 8. MPLAB® XC16 Compiler installation
+
 
 
 
