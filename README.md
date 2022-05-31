@@ -7,7 +7,7 @@
 This document describes the setup requirements for running the Sensor-less FOC algorithm with a Sliding Mode Observer, which is referenced in AN1078 “Sensorless Field Oriented Control of a PMSM” and to implement three phase currents reconstruction algorithm using DC bus Current,which is referenced in AN1299“Single-Shunt Three-Phase Current Reconstruction Algorithm for
 Sensorless FOC of a PMSM” using a MCLV-48V-300W Inverter Board and dsPIC33CK512MP508 Motor Control Dual In-line Module (DIM).</p>
 <p style='text-align: justify;'>
-The demonstration is configured to run on the MCLV-48V-300W Inverter Board and dsPIC33CH512MP508 Motor Control Dual In-line Module (DIM) in both Internal and External Op Amp configuration with the dsPIC33CK256MP508.
+The demonstration is configured to run on the MCLV-48V-300W Inverter Board and dsPIC33CK256MP508 Motor Control Dual In-line Module (DIM) in both Internal and External Op Amp configuration with the dsPIC33CK256MP508.
 </p>
 
 ## FIELD ORIENTED CONTROL (FOC)
@@ -29,7 +29,7 @@ To clone or download this application from Github, go to the [main page of this 
 >The software used for testing the firmware prior to release is listed above. It is recommended to use the version listed above or later versions for building the firmware.
 ## Hardware Tools Required for the Demonstration
 - MCLV-48V-300W Inverter Board, Part-No. [EV18H47A]
-- 	dsPIC33CH512MP508 Motor Control DIM, Part-No. [EV76L31A]
+- 	dsPIC33CK256MP508 Motor Control DIM, Part-No. [EV62P66A]
 - 24V Power Supply, Part-No. [AC002013](https://www.microchipdirect.com/dev-tools/AC002013)
 - 24V 3-Phase Brushless DC Motor, Part-No. [AC300020](https://www.microchip.com/en-us/development-tool/AC300020)
   <br />
@@ -40,50 +40,48 @@ To clone or download this application from Github, go to the [main page of this 
 <p style='text-align: justify;'>This section describes hardware setup required for the demonstration. Motor phase current feed-backs needed by the firmware are amplified by the operational amplifiers.</p>
 <p style='text-align: justify;'>
 If the amplifiers that are internal to the dsPIC33CK256MP508 are used, then that configuration is called internal amplifier configuration. If external amplifiers are used, then that configuration is called as external amplifier configuration.</p>
+<p style='text-align: justify;'>
+1. Perform the following modifications based upon amplifier configuration. By default, Board is configured for Internal OP-AMP Configuration.</p>
 
-1. <p style='text-align: justify;'>Perform the following modifications based upon amplifier configuration. By default, Board is configured for Internal OP-AMP Configuration.</p>
 
     - For running the motor in internal op amp configuration make sure that resistors R9, R29, R14 are populated and R6, R25, R10 are unpopulated on the DIM. Also ensure internal amplifiers are configured and enabled.
     - For running the motor in external amp configuration make sure that resistors R6, R25, R10  are populated and  R9, R29, R14 on the  DIM are unpopulated. Also disable internal amplifiers in the firmware.
 
 
-2. Motor currents are amplified on the MCLV-48V-300W Inverter Board. The firmware and DIM are configured to sample and convert external amplifier outputs to measure the motor currents needed to implement FOC.</p> 
+<p style='text-align: justify;'>
+2. Motor currents are amplified on the MCLV-48V-300W Inverter Board. The firmware and DIM are configured to sample and convert external amplifier outputs to measure the motor currents needed to implement FOC. </p>
 
-
-3. Insert the dsPIC33CH512MP508 Motor Control DIM into the DIM Interface Connector J8 pro-vided on the MCLV-48V-300W Inverter Board. Make sure the DIM is placed correctly and ori-ented before going ahead.
+<p style='text-align: justify;'>
+3. Insert the dsPIC33CK256MP508 Motor Control DIM into the DIM Interface Connector J8 pro-vided on the MCLV-48V-300W Inverter Board. Make sure the DIM is placed correctly and ori-ented before going ahead.</p>
 
 <p align="center">
-  <img  src="images/dimconnected.PNG"></p>
- <p align = "center"><font size="2"> Figure 1  MCLV-48V-300W Board connected to DIM 
+ <img  src="images/dimconnected.PNG"></p>
+<p align = "center"><font size ="2">Figure 1 DIM connected to the MCLV-48V-300W Inverter Board.</p>
 
- 4. Connect the three phase wires from the motor to PHA, PHB, and PHC terminals of connector J14(there is no specific order), provided on the MCLV-48V-300W Inverter Board.
+<p style='text-align: justify;'>
+4. Connect the three phase wires from the motor to PHA, PHB, and PHC terminals of connector J14(there is no specific order), provided on the MCLV-48V-300W Inverter Board.</p>
 
-<br />
 
 <p align="center">
   <img  src="images/motorconnection.png"></p>
  <p align = "center"><font size="2"> Figure 2  MCLV-48V-300W Inverter Board motor Connection diagram
-
-5.	Plug in the 24V power supply to connector J1 provided on the MCLV-48V-300W Inverter Board. Alternatively, the Inverter Board can also be powered through Connector J2.</p>
-
+ </p>
 <p style='text-align: justify;'>
+5.	Plug in the 24V power supply to connector J1 provided on the MCLV-48V-300W Inverter Board. Alternatively, the Inverter Board can also be powered through Connector J2.</p>
 
 <p align="center">
   <img  src="images/mclvpower.png"></p>
  <p align = "center"><font size="2"> Figure 3  MCLV-48V-300W Power Supply Connector
-
- 6.	The board has an onboard programmer ‘PICKIT™ On Board (PKOBv4)”, which can be used for programming or debugging the dsPIC33CH512MP508. To use an on-board programmer, connect a micro-USB cable between Host PC and Connector J16 provided on the MCLV-48V-300W Inverter Board.</p>
-</p> 
+ </p>
 <p style='text-align: justify;'>
+ 6.	The board has an onboard programmer ‘PICKIT™ On Board (PKOBv4)”, which can be used for programming or debugging the dsPIC33CK256MP508. To use an on-board programmer, connect a micro-USB cable between Host PC and Connector J16 provided on the MCLV-48V-300W Inverter Board.</p>
+
 
 <p align="center">
   <img  src="images/mclvpkob4.png"></p>
  <p align = "center"><font size="2"> Figure 4  MCLV-48V-300W Inverter Board PKOB4
-
- 7.	Alternatively, the device can also be programmed using the programmer/debugger (MPLAB® PICkit™ 4 In-Circuit Debugger - PG164140) by interfacing it through connector J10 of the dsPIC33CK MCLV-48V-300W Inverter Board as shown below. Ensure that the programmer is oriented correctly before proceeding..
-</p> 
 <p style='text-align: justify;'>
-
+ 7.	Alternatively, the device can also be programmed using the programmer/debugger (MPLAB® PICkit™ 4 In-Circuit Debugger - PG164140) by interfacing it through connector J10 of the dsPIC33CK MCLV-48V-300W Inverter Board as shown below. Ensure that the programmer is oriented correctly before proceeding.</p> 
 
 <p align="center">
   <img  src="images/mclvprogramming.PNG"></p>
