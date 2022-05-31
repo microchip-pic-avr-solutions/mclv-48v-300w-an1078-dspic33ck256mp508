@@ -29,7 +29,7 @@ To clone or download this application from Github, go to the [main page of this 
 >The software used for testing the firmware prior to release is listed above. It is recommended to use the version listed above or later versions for building the firmware.
 ## Hardware Tools Required for the Demonstration
 - MCLV-48V-300W Inverter Board, Part-No. [EV18H47A]
-- 	dsPIC33CK256MP508 Motor Control DIM, Part-No. [EV76L31A]
+- 	dsPIC33CK256MP508 Motor Control DIM, Part-No. [EV62P66A]
 - 24V Power Supply, Part-No. [AC002013](https://www.microchipdirect.com/dev-tools/AC002013)
 - 24V 3-Phase Brushless DC Motor, Part-No. [AC300020](https://www.microchip.com/en-us/development-tool/AC300020)
   <br />
