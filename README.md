@@ -44,7 +44,7 @@ To clone or download this application from Github, go to the [main page of this 
 The Table-1 summarizes the resistors to be populated and removed to convert the DIM from internal op-amp configuration to external op-amp configuration or vice versa.</p>
 
 <p align="center">
- <img  src="images/Tableopamp.PNG"></p>
+ <img  src="images/Tableopamp.png"></p>
 <p align = "center"><font size ="2"> TABLE 1: SELECTION BETWEEN EXTERNAL AND INTERNAL AMPLIFIER OUTPUTS</p>
 
 
