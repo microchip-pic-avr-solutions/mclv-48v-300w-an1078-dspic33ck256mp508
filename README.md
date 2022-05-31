@@ -191,7 +191,7 @@ Follow below instructions step by step to setup and run the motor control demo a
   
 8. <p style='text-align: justify;'>	6.	If the device is successfully programmed, LD3(‘LED2’) will be turned ON, indicating that the dsPIC® DSC is enabled. </p> 
  <p align="center">
-  <img  src="images/led.PNG"></p>
+  <img  src="images/led.png"></p>
  <p align = "center"><font size="2"> Figure 15  LED turned on
 </p>
 
@@ -199,7 +199,7 @@ Follow below instructions step by step to setup and run the motor control demo a
 9. <p style='text-align: justify;'>		Run or stop the motor by pressing the push button SW1. The motor should start spin-ning smoothly in one direction in the ‘Normal Speed Range.’ Ensure that the motor is spinning smoothly without any vibration. The LED LD2 (‘ LED1’) is turned ON to show the button is pressed to start the motor.</p>
 
   <p align="center">
-  <img  src="images/pushbuttons.PNG"></p>
+  <img  src="images/pushbuttons.png"></p>
  <p align = "center"><font size="2"> Figure 16  Push buttons
 </p>
  
@@ -214,7 +214,7 @@ Follow below instructions step by step to setup and run the motor control demo a
 
 12.	<p style='text-align: justify;'>Press the push button SW1 to stop the motor.</p>
 <p align="center">
-  <img  src="images/stopButton.PNG"></p>
+  <img  src="images/stopButton.png"></p>
  <p align = "center"><font size="2"> Figure 18  Stop Button
 </p>
 > **_NOTE:_**
