@@ -37,51 +37,45 @@ To clone or download this application from Github, go to the [main page of this 
 > All items listed under the section Hardware Tools Required for the Demonstration are available at [microchip DIRECT](https://www.microchipdirect.com/)
 
 ## Hadware Setup
-<p style='text-align: justify;'>This section describes hardware setup required for the demonstration. Motor phase current feed-backs needed by the firmware are amplified by the operational amplifiers.</p>
+<p style='text-align: justify;'>This section describes hardware setup required for the demonstration.</p>
 <p style='text-align: justify;'>
-If the amplifiers that are internal to the dsPIC33CK256MP508 are used, then that configuration is called internal amplifier configuration. If external amplifiers are used, then that configuration is called as external amplifier configuration.</p>
+1. Motor currents are amplified on the MCLV-48V-300W Inverter Board; it can also be amplified by the amplifiers internal to the dsPIC33CK256MP508 populated on the DIM. By default, the firmware and DIM are configured to sample and convert internal amplifier outputs ('internal op-amp configuration'), measuring the motor currents needed for implementing FOC.</p>
 <p style='text-align: justify;'>
-1. Perform the following modifications based upon amplifier configuration. By default, Board is configured for Internal OP-AMP Configuration.</p>
+The Table-1 summarizes the resistors to be populated and removed to convert the DIM from internal op-amp configuration to external op-amp configuration or vice versa.</p>
 
+<p align="center">
+ <img  src="images/Tableopamp.png"></p>
+<p align = "center"><font size ="2"> TABLE 1: SELECTION BETWEEN EXTERNAL AND INTERNAL AMPLIFIER OUTPUTS</p>
 
-    - For running the motor in internal op amp configuration make sure that resistors R9, R29, R14 are populated and R6, R25, R10 are unpopulated on the DIM. Also ensure internal amplifiers are configured and enabled.
-    - For running the motor in external amp configuration make sure that resistors R6, R25, R10  are populated and  R9, R29, R14 on the  DIM are unpopulated. Also disable internal amplifiers in the firmware.
-
-
-<p style='text-align: justify;'>
-2. Motor currents are amplified on the MCLV-48V-300W Inverter Board. The firmware and DIM are configured to sample and convert external amplifier outputs to measure the motor currents needed to implement FOC. </p>
 
 <p style='text-align: justify;'>
-3. Insert the dsPIC33CK256MP508 Motor Control DIM into the DIM Interface Connector J8 pro-vided on the MCLV-48V-300W Inverter Board. Make sure the DIM is placed correctly and ori-ented before going ahead.</p>
+2. Insert the dsPIC33CK256MP508 Motor Control DIM into the DIM Interface Connector J8 pro-vided on the MCLV-48V-300W Inverter Board. Make sure the DIM is placed correctly and ori-ented before going ahead.</p>
 
 <p align="center">
  <img  src="images/dimconnected.PNG"></p>
 <p align = "center"><font size ="2">Figure 1 DIM connected to the MCLV-48V-300W Inverter Board.</p>
 
 <p style='text-align: justify;'>
-4. Connect the three phase wires from the motor to PHA, PHB, and PHC terminals of connector J14(there is no specific order), provided on the MCLV-48V-300W Inverter Board.</p>
-
-
+3. Connect the three phase wires from the motor to PHA, PHB, and PHC terminals of connector J14(there is no specific order), provided on the MCLV-48V-300W Inverter Board.</p>
 <p align="center">
   <img  src="images/motorconnection.png"></p>
  <p align = "center"><font size="2"> Figure 2  MCLV-48V-300W Inverter Board motor Connection diagram
  </p>
 <p style='text-align: justify;'>
-5.	Plug in the 24V power supply to connector J1 provided on the MCLV-48V-300W Inverter Board. Alternatively, the Inverter Board can also be powered through Connector J2.</p>
-
+4.	Plug in the 24V power supply to connector J1 provided on the MCLV-48V-300W Inverter Board. Alternatively, the Inverter Board can also be powered through Connector J2.</p>
 <p align="center">
   <img  src="images/mclvpower.png"></p>
  <p align = "center"><font size="2"> Figure 3  MCLV-48V-300W Power Supply Connector
  </p>
 <p style='text-align: justify;'>
- 6.	The board has an onboard programmer ‘PICKIT™ On Board (PKOBv4)”, which can be used for programming or debugging the dsPIC33CK256MP508. To use an on-board programmer, connect a micro-USB cable between Host PC and Connector J16 provided on the MCLV-48V-300W Inverter Board.</p>
+ 5.	The board has an onboard programmer ‘PICKIT™ On Board (PKOBv4)”, which can be used for programming or debugging the dsPIC33CK256MP508. To use an on-board programmer, connect a micro-USB cable between Host PC and Connector J16 provided on the MCLV-48V-300W Inverter Board.</p>
 
 
 <p align="center">
   <img  src="images/mclvpkob4.png"></p>
  <p align = "center"><font size="2"> Figure 4  MCLV-48V-300W Inverter Board PKOB4
 <p style='text-align: justify;'>
- 7.	Alternatively, the device can also be programmed using the programmer/debugger (MPLAB® PICkit™ 4 In-Circuit Debugger - PG164140) by interfacing it through connector J10 of the dsPIC33CK MCLV-48V-300W Inverter Board as shown below. Ensure that the programmer is oriented correctly before proceeding.</p> 
+ 6.	Alternatively, the device can also be programmed using the programmer/debugger (MPLAB® PICkit™ 4 In-Circuit Debugger - PG164140) by interfacing it through connector J10 of the dsPIC33CK MCLV-48V-300W Inverter Board as shown below. Ensure that the programmer is oriented correctly before proceeding.</p> 
 
 <p align="center">
   <img  src="images/mclvprogramming.PNG"></p>
@@ -127,7 +121,7 @@ For more details refer Microchip Application note AN1078 “Sensorless Field Ori
 
 > **_NOTE:_**
 > The project may not build correctly in Windows OS if Maximum path length of any source file in the project is more than 260 characters. In case absolute path is exceeding or nearing maximum length, do any (or both) of the following:
- > - Shorten the name of the directory containing the firmware used in this demonstration. In this case, rename directory AN1078_dsPIC33CK256MP508_EXT_INT_OPAMP_MCLV48V300W to more ap-propriate shorter name. In case you renamed the directory, consider the new name while reading instructions provided in the upcoming sections of the document. 
+ > - Shorten the name of the directory containing the firmware used in this demonstration. In this case, rename directory AN1078_dsPIC33CK256MP508_MCLV48V300W to more ap-propriate shorter name. In case you renamed the directory, consider the new name while reading instructions provided in the upcoming sections of the document. 
 > - Place firmware in a location, such that absolute path length of each file included in the projects does not exceed the Maximum Path length specified. 
 For details, refer MPLAB X IDE help topic “Path, File and Folder Name Restrictions”.
 
@@ -195,25 +189,34 @@ Follow below instructions step by step to setup and run the motor control demo a
  <p align = "center"><font size="2"> Figure 14  Device Programming
 </p>
   
-8. <p style='text-align: justify;'>		If the device is successfully programmed, LD10 (‘LED1) will be turned ON, indicating that the dsPIC® DSC is enabled.</p> 
+8. <p style='text-align: justify;'>	6.	If the device is successfully programmed, LD3(‘LED2’) will be turned ON, indicating that the dsPIC® DSC is enabled. </p> 
+ <p align="center">
+  <img  src="images/led.png"></p>
+ <p align = "center"><font size="2"> Figure 15  LED turned on
+</p>
 
-9. <p style='text-align: justify;'>		Run or Stop the motor by pressing the push button SW1. The function of the pushbutton SW1 (Run/Stop of the motor) is indicated by turning ON or OFF the LD11 (LED2).</p>
+
+9. <p style='text-align: justify;'>		Run or stop the motor by pressing the push button SW1. The motor should start spin-ning smoothly in one direction in the ‘Normal Speed Range.’ Ensure that the motor is spinning smoothly without any vibration. The LED LD2 (‘ LED1’) is turned ON to show the button is pressed to start the motor.</p>
 
   <p align="center">
   <img  src="images/pushbuttons.png"></p>
- <p align = "center"><font size="2"> Figure 15  Push buttons
+ <p align = "center"><font size="2"> Figure 16  Push buttons
 </p>
  
 10. <p style='text-align: justify;'>	If desired, the motor speed can be varied using the potentiometer (labeled “POT1”).</p>
 
   <p align="center">
   <img  src="images/potentiometer.png"></p>
- <p align = "center"><font size="2"> Figure 16  Potentiometer
+ <p align = "center"><font size="2"> Figure 17  Potentiometer
 </p>
  
 11.	<p style='text-align: justify;'>To enter the extended speed range (NOMINAL_SPEED_RPM to MAXIMUM_SPEED_RPM) press the push button SW2. Press the push button SW2 again to revert the speed of the motor to its normal speed (END_SPEED_RPM to NOMINAL_SPEED_RPM) range. </p>
-12.	<p style='text-align: justify;'>Press the push button SW1 to stop the motor.</p>
 
+12.	<p style='text-align: justify;'>Press the push button SW1 to stop the motor.</p>
+<p align="center">
+  <img  src="images/stopButton.png"></p>
+ <p align = "center"><font size="2"> Figure 18  Stop Button
+</p>
 > **_NOTE:_**
 >The macro definitions END_SPEED_RPM, NOMINAL_SPEED_RPM, and MAXIMUM_SPEED_RPM are specified in userparms.h file included in the project pmsm.X. The definitions NOMINAL_SPEED_RPM, and MAXIMUM_SPEED_RPM are defined as per the specification provided by the Motor manufacturer. Exceeding manufacture specification may lead to damage of the motor or(and) the board. 
 
@@ -232,54 +235,54 @@ The application firmware comes with initialization required to interface Control
 
  <p align="center">
   <img  src="images/projectcleanandbuild.png"></p>
- <p align = "center"><font size="2"> Figure 17  Clean and Build
+ <p align = "center"><font size="2"> Figure 19  Clean and Build
 </p>
  
 5.	<p style='text-align: justify;'>Please ensure that the checkbox “Load symbols when programming or building for pro-duction (slows process)” is checked, which is under the “Loading” category of the Project Properties window</p>
 
  <p align="center">
   <img  src="images/loadvariables.png"></p>
- <p align = "center"><font size="2"> Figure 18  Load Variables
+ <p align = "center"><font size="2"> Figure 20  Load Variables
 </p>
 
 6.	<p style='text-align: justify;'>To build the project (in this case pmsm.X) and program the device dsPIC33CK256MP508, click “Make and Program Device Main project” on the toolbar.</p>
 
  <p align="center">
   <img  src="images/deviceprogramming.png"></p>
- <p align = "center"><font size="2"> Figure 19  Device Programming
+ <p align = "center"><font size="2"> Figure 21  Device Programming
 </p>
 
 7.	<p style='text-align: justify;'>Open the X2C window by selecting Tools>Embedded>X2CScope.</p>
 
  <p align="center">
   <img  src="images/x2cselection.png"></p>
- <p align = "center"><font size="2"> Figure 20  X2C Selection
+ <p align = "center"><font size="2"> Figure 22  X2C Selection
 </p>
 
 8.	<p style='text-align: justify;'>Open the X2CScope Configuration window and in “Select project” menu, select bldc project as shown.</p>
 
  <p align="center">
   <img  src="images/x2cprojectselection.png"></p>
- <p align = "center"><font size="2"> Figure 21  X2C Project selection
+ <p align = "center"><font size="2"> Figure 23  X2C Project selection
 </p>
 
 9.	<p style='text-align: justify;'>Remote Communication needs to be established, as indicated in the following figure. Ensure the communication baud rate is set to 115200 as the same is set in the application firmware, while COM port used depends on the system settings. Refresh button lists the available COM Ports. Select the COM Port as per the connection.</p>
  <p align="center">
   <img  src="images/x2cconnectionsetup.png"></p>
- <p align = "center"><font size="2"> Figure 22  X2C Connection setup
+ <p align = "center"><font size="2"> Figure 24  X2C Connection setup
 </p>
 
 
 10.	<p style='text-align: justify;'>Once COM port detected, click on “Disconnected”, and it will be turn into “Connected”, if the link is established as programmed.</p>
   <p align="center">
   <img  src="images/x2cconnectionbutton.png"></p>
- <p align = "center"><font size="2"> Figure 23  X2C Connection Button
+ <p align = "center"><font size="2"> Figure 25  X2C Connection Button
 </p>
 
 11.	<p style='text-align: justify;'>Set the “Project Setup” as shown below and click “Set Values”. Set Scope sample time as interval at which X2CScopeUpdate() is called. In this application it is every 20kHz (50µs).</p>
  <p align="center">
   <img  src="images/x2cprojectsetup.png"></p>
- <p align = "center"><font size="2"> Figure 24  X2C Project Setup
+ <p align = "center"><font size="2"> Figure 26  X2C Project Setup
 </p>
 
 
@@ -287,7 +290,7 @@ The application firmware comes with initialization required to interface Control
 
  <p align="center">
   <img  src="images/x2cdataview.png"></p>
- <p align = "center"><font size="2"> Figure 25  X2C Dataview
+ <p align = "center"><font size="2"> Figure 27  X2C Dataview
 </p>    	     
 
 13.	<p style='text-align: justify;'>In this window, select the variables that needs to be monitored. To do this, click on the source against each channel, a window Select Variables opens upon the screen. From the available list, the required variable can be chosen. Ensure check boxes Enable & Visible are checked for the variables to be plotted.</p>
@@ -296,14 +299,14 @@ The application firmware comes with initialization required to interface Control
 
  <p align="center">
   <img  src="images/x2cdatapointselection.png"></p>
- <p align = "center"><font size="2"> Figure 26  X2C Datapoint selection
+ <p align = "center"><font size="2"> Figure 28  X2C Datapoint selection
 </p>
  
 
 14.	<p style='text-align: justify;'>Click on SAMPLE, then X2C scope window shows variables in real time, which is updated automatically.</p>
   <p align="center">
   <img  src="images/x2csample.png"></p>
- <p align = "center"><font size="2"> Figure 27  X2C Sample
+ <p align = "center"><font size="2"> Figure 29  X2C Sample
 </p>
 
 
@@ -311,7 +314,7 @@ The application firmware comes with initialization required to interface Control
 
  <p align="center">
   <img  src="images/x2cabort.png"></p>
- <p align = "center"><font size="2"> Figure 28  X2C Abort
+ <p align = "center"><font size="2"> Figure 30  X2C Abort
 </p>
 
   
