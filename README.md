@@ -45,7 +45,7 @@ To clone or download this application from Github, go to the [main page of this 
 
 
 
-2. <p style='text-align: justify;'> Insert the dsPIC33CK256MP508 Motor Control DIM into the DIM Interface Connector J8 pro-vided on the MCLV-48V-300W Inverter Board. Make sure the DIM is placed correctly and ori-ented before going ahead.</p>
+2. <p style='text-align: justify;'> Insert the dsPIC33CK256MP508 Motor Control DIM into the DIM Interface Connector J8 provided on the MCLV-48V-300W Inverter Board. Make sure the DIM is placed correctly and oriented before going ahead.</p>
 
     <p align="left">
     <img  src="images/dimconnected.PNG"></p>
@@ -55,18 +55,18 @@ To clone or download this application from Github, go to the [main page of this 
     <p align="left">
       <img  src="images/motorconnection.png"></p>
 
-4. <p style='text-align: justify;'>	Plug in the 24V power supply to connector J1 provided on the MCLV-48V-300W Inverter Board. Alternatively, the Inverter Board can also be powered through Connector J2.</p>
+4. <p style='text-align: justify;'>	Plug in the 24V power supply to connector J1 provided on the MCLV-48V-300W Inverter Board. Alternatively, the Inverter Board can also be powered through Connector J3.</p>
       <p align="left">
       <img  src="images/mclvpower.png"></p>
  
 
- 5.	<p style='text-align: justify;'>The board has an onboard programmer ‘PICKIT™ On Board (PKOBv4)”, which can be used for programming or debugging the dsPIC33CK256MP508. To use an on-board programmer, connect a micro-USB cable between Host PC and Connector J16 provided on the MCLV-48V-300W Inverter Board.</p>
+ 5.	<p style='text-align: justify;'>The board has an onboard programmer ‘PICkit™ On Board (PKOBv4)”, which can be used for programming or debugging the dsPIC33CK256MP508. To use an on-board programmer, connect a micro-USB cable between Host PC and Connector J16 provided on the MCLV-48V-300W Inverter Board.</p>
 
 
       <p align="left">
      <img  src="images/mclvpkob4.png"></p>
 
- 6.	<p style='text-align: justify;'>Alternatively, the device can also be programmed using the programmer/debugger (MPLAB® PICkit™ 4 In-Circuit Debugger - PG164140) by interfacing it through connector J10 of the dsPIC33CK MCLV-48V-300W Inverter Board as shown below. Ensure that the programmer is oriented correctly before proceeding.</p> 
+ 6.	<p style='text-align: justify;'>6.	Alternatively, connect the Microchip programmer/debugger MPLAB PICkit 4 In-Circuit Debugger to the ICSP header J9 of the MCLV-48V-300W Inverter Board as shown below and to the Host PC used for programming the device. Ensure that PICkit 4 is oriented correctly before proceeding.</p> 
 
       <p align="left">
        <img  src="images/mclvprogramming.PNG"></p>
