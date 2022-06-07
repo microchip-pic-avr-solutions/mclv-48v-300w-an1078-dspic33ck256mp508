@@ -184,7 +184,7 @@ Follow below instructions step by step to setup and run the motor control demo a
      <img  src="images/pushbuttons.png"></p>
  
 
-9.  <p style='text-align: justify;'>If desired, the motor speed can be varied using the potentiometer (labeled “POT1”).</p>
+9.  <p style='text-align: justify;'> The motor speed can be varied using the potentiometer (labeled “POT1”).</p>
     <p align="left">
     <img  src="images/potentiometer.png"></p>
 
