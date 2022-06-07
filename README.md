@@ -53,11 +53,9 @@ To clone or download this application from Github, go to the [main page of this 
     <img  src="images/dimconnected.PNG"></p>
 
 
-
 3. <p style='text-align: justify;'> Connect the three phase wires from the motor to PHA, PHB, and PHC terminals of connector J14(there is no specific order), provided on the MCLV-48V-300W Inverter Board.</p>
     <p align="left">
       <img  src="images/motorconnection.png"></p>
-
 
 4. <p style='text-align: justify;'>	Plug in the 24V power supply to connector J1 provided on the MCLV-48V-300W Inverter Board. Alternatively, the Inverter Board can also be powered through Connector J2.</p>
       <p align="left">
@@ -228,13 +226,13 @@ Follow below instructions step by step to setup and run the motor control demo a
 
 6.	Serial communication needs to be set up, as shown in the following figure. Ensure the communication baud rate is set to 115200 as configured in the application firmware. The COM port used depends on the system settings. The <span style="font-family:Courier New; font-size:;">refresh button</span> lists the available COM Ports. Select the COM Port as per the connection.
 
-    <p align="center">
+    <p align="left">
      <img  src="images/x2cconnectionsetup.png"></p>
  
 
 
 7. Once the COM port is detected, click on “Disconnected” and turn to “Connected”, to establish a serial communication between Host PC and the board.
-     <p align="center">
+     <p align="left">
     <img  src="images/x2cconnectionbutton.png"></p>
 
 
@@ -254,12 +252,12 @@ To view data plots continuously, uncheck<span style="font-family:Courier New; fo
     <img  src="images/x2cdatapointselection.png"></p>
 
 11.	Click on SAMPLE, then X2C scope window shows variables in real time, which is updated automatically.
-     <p align="center">
+     <p align="left">
      <img  src="images/x2csample.png"></p>
  
 
 12.	Click on ABORT to stop.
-     <p align="center">
+     <p align="left">
      <img  src="images/x2cabort.png"></p>
  
  ## 6. REFERENCES:
