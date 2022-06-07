@@ -138,7 +138,7 @@ Follow below instructions step by step to setup and run the motor control demo a
 3. <p style='text-align: leftjustify;'> Open <span style="font-family:Courier New; font-size:;">userparams.h </span>(under<span style="font-family:Courier New; font-size:;"> pmsm.X -> headerfiles)</span> in the project <span style="font-family:Courier New; font-size:;">pmsm.X</span> </p>
      <p style='text-align: leftjustify;'>
       - Ensure that <span style="font-family:Courier New; font-size:;">TUNING, OPEN_LOOP_FUNCTIONING, and TORQUE_MODE </span>are not defined.
-        <p align="left"><img  src="images/configparam.png"></p>
+        <p align="left"><img  src="images/configparam.PNG"></p>
     - When internal amplifiers are used for current amplification (referred as <b>‘Internal Op Amp configuration’</b>) then<b> define</b> <span style="font-family:Courier New; font-size:;">INTERNAL_OPAMP_CONFIG</span>.
         <p align="left"> <img  src="images/internalopampconfig.png"></p>
        Otherwise if external amplifiers are used for current amplification (referred as <b>‘External Op Amp Configuration’</b>) then <b>undefine </b>the macro <span style="font-family:Courier New; font-size:;">INTERNAL_OPAMP_CONFIG</span> in <span style="font-family:Courier New; font-size:;"> userparams.h.</span></p>
@@ -149,16 +149,14 @@ Follow below instructions step by step to setup and run the motor control demo a
    
    
 > **_NOTE:_**
->The motor phase currents can be reconstructed from the DC Bus current by appropriately sampling it during the PWM switching period, called a single-shunt reconstruction algorithm. The firmware can be configured to demonstrate the single shunt reconstruction algorithm by defining the macro <span style="font-family:Courier New; font-size:1;">‘SINGLE_SHUNT’</span> in the header file <span style="font-family:Courier New; font-size:;"> userparams.h </span>
-<br>
-> For additional information, refer to Microchip application note <b>AN1299, “Single-Shunt Three-Phase Current Reconstruction Algorithm for Sensorless FOC of a PMSM.”</b> <br>
-<br>
+>The motor phase currents can be reconstructed from the DC Bus current by appropriately sampling it during the PWM switching period, called a single-shunt reconstruction algorithm. The firmware can be configured to demonstrate the single shunt reconstruction algorithm by defining the macro <span style="font-family:Courier New; font-size:1;">‘SINGLE_SHUNT’</span> in the header file <span style="font-family:Courier New; font-size:;"> userparams.h </span><br>
+>For additional information, refer to Microchip application note <b>AN1299, “Single-Shunt Three-Phase Current Reconstruction Algorithm for Sensorless FOC of a PMSM.”</b> <br>
 >By default, the firmware uses phase currents measured across the phase shunt resistors on two of the half-bridges of the three-phase inverter (‘dual shunt configuration’) to implement FOC.
 
 
 4. Right click on the project <i>pmsm.X</i> and select “Properties”  to open its Project Properties Dialog.Click the “Conf: [default]” category to reveal the general project configuration infor-mation. The development tools used for testing the firmware are listed in the section [2.2 Software Tools Used for Testing the firmware](#22-software-tools-used-for-testing-the-firmware).
    <p style='text-align: justify;'>
-    In the <b><i>‘Conf: [default]’</b> </i>category window: 
+    In the <b><i>‘Conf: [default]’</i></b> category window: 
     <p style='text-align: justify;'>
 
    - Select the specific Compiler Toolchain from the available list of compilers. Please ensure MPLAB® XC16 Compiler supports the device dsPIC33CK256MP508.In this case, “XC16(v1.70)” is selected.
@@ -170,12 +168,12 @@ Follow below instructions step by step to setup and run the motor control demo a
         <p align="left">
         <img  src="images/projectpropertiessettings.png"></p>
 
-5. <p style='text-align: justify;'> Ensure that the checkbox <b>“Load symbols when programming or building for pro-duction (slows process)”</b> is checked, which is under the “Loading” category of the Project Properties window</p>        
+5. <p style='text-align: justify;'> Ensure that the checkbox <b>“Load symbols when programming or building for pro-duction (slows process)”</b> is checked, which is under the “Loading” category of the Project Properties window.</p>        
         
       <p align="left">
       <img  src="images/loadvariables.png"></p>
 
-6. To build the project (in this case pmsm.X) and program the device dsPIC33CK256MP508, click <b>“Make and Program Device Main project”</b> on the toolbar.
+6. <p style='text-align: justify;'>	 To build the project (in this case pmsm.X) and program the device dsPIC33CK256MP508, click <b>“Make and Program Device Main project”</b> on the toolbar.</p>
     <p align="left">
     <img  src="images/deviceprogramming.png"></p>
   
