@@ -41,8 +41,8 @@ To clone or download this application from Github, go to the [main page of this 
 
      <p style='text-align: justify;'> The Table-1 summarizes the resistors to be populated and removed to convert the DIM from internal op-amp configuration to external op-amp configuration or vice versa.</p>
 
-<p align="center">
- <img  src="images/Tableopamp.png"></p>
+<p align="center" >
+ <img  src="images/Tableopamp.png" width = 400 height = 100></p>
 
 
 
@@ -138,7 +138,8 @@ Follow below instructions step by step to setup and run the motor control demo a
 3. <p style='text-align: leftjustify;'> Open <span style="font-family:Courier New; font-size:;">userparams.h </span>(under<span style="font-family:Courier New; font-size:;"> pmsm.X -> headerfiles)</span> in the project <span style="font-family:Courier New; font-size:;">pmsm.X</span> </p>
      <p style='text-align: leftjustify;'>
       - Ensure that <span style="font-family:Courier New; font-size:;">TUNING, OPEN_LOOP_FUNCTIONING, and TORQUE_MODE </span>are not defined.
-        <p align="left"><img  src="images/configParam.png"></p>
+      
+      <p align="left"><img  src="images/configParam.png"></p>
     - When internal amplifiers are used for current amplification (referred as <b>‘Internal Op Amp configuration’</b>) then<b> define</b> <span style="font-family:Courier New; font-size:;">INTERNAL_OPAMP_CONFIG</span>.
         <p align="left"> <img  src="images/internalopampconfig.png"></p>
        Otherwise if external amplifiers are used for current amplification (referred as <b>‘External Op Amp Configuration’</b>) then <b>undefine </b>the macro <span style="font-family:Courier New; font-size:;">INTERNAL_OPAMP_CONFIG</span> in <span style="font-family:Courier New; font-size:;"> userparams.h.</span></p>
