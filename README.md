@@ -83,13 +83,13 @@ Install MPLAB X IDE and MPLAB XC16 Compiler versions that support the device dsP
 
 <p style='text-align: justify;'>If MPLAB IDE v8 or earlier is already installed on your computer, then run the MPLAB driver switcher (It is installed when MPLAB®X IDE is installed) to switch from MPLAB IDE v8 drivers to MPLAB X IDE drivers. If you have Windows 7 or 8, you must run MPLAB driver switcher in ‘Administrator Mode’. To run the Device Driver Switcher GUI application as administrator, right click on the executable (or desktop icon) and select ‘Run as Administrator’. For additional details refer MPLAB X IDE help topic <i>“Before You Begin: Install the USB Device Drivers (For Hardware Tools): USB Driver Installation for Windows Operating Systems”</i>. </p>
 
-### 4.2  X2C - SCOPE
+### 4.2  X2C-Scope
 <p style='text-align: justify;'>
-X2C - SCOPE is a MPLAB X IDE plugin that allows a developer to interact with an application while the application program is running. X2C-Scope enables you to read, write, and plot global variables (for motor control) in real time. It communicates with the target using the UART. To use X2C, the plugin must be installed:</p>
+X2C-Scope is a MPLAB X IDE plugin that allows a developer to interact with an application while the application program is running. X2C-Scope enables you to read, write, and plot global variables (for motor control) in real time. It communicates with the target using the UART. To use X2C-Scope, the plugin must be installed:</p>
 
 - In MPLAB X IDE, select <i>Tools>Plugins</i> and click on the Available Plugins tab.
-- Select X2C - SCOPE plug-in by checking its check box, and then click Install.
-- Look for tool X2C - SCOPE under <i>Tools>Embedded.</i>
+- Select X2C-Scope plug-in by checking its check box, and then click Install.
+- Look for tool X2C-Scope under <i>Tools>Embedded.</i>
 
 <p align="left">
   <img  src="images/x2cscopeconfiguration.png"></p>
@@ -200,11 +200,11 @@ Follow below instructions step by step to setup and run the motor control demo a
 >**_NOTE:_**
 >The macro definitions END_SPEED_RPM, NOMINAL_SPEED_RPM, and MAXIMUM_SPEED_RPM are specified in userparms.h file included in the project pmsm.X. The definitions NOMINAL_SPEED_RPM, and MAXIMUM_SPEED_RPM are defined as per the specification provided by the Motor manufacturer. Exceeding manufacture specification may lead to damage of the motor or(and) the board. 
 
-## 5.3  Data visualization through X2CScope Plug-in of MPLABX
+## 5.3  Data visualization through X2C-Scope Plug-in of MPLABX
 <p style='text-align: justify;'>
- The application firmware comes with initialization required to interface Controller with Host PC to enable Data visualization through X2C Scope plug-in. X2C-Scope is a third-party plugin for MPLAB X which facilitates real-time diagnostics.</p>
+ X2C-Scope is a third-party plug-in for MPLAB X, which helps in real-time diagnostics. The application firmware comes with the initialization needed to interface controller with the host PC to enable data visualization through X2C-Scope plug-in.</p>
 
-1. Ensure X2C Scope Plug-in is installed. For additional information on how to set up a plug-in refer [https://microchipdeveloper.com/mplabx:tools-plugins-available](https://microchipdeveloper.com/mplabx:tools-plugins-available)
+1. Ensure X2C-Scope Plug-in is installed. For additional information on how to set up a plug-in refer [https://microchipdeveloper.com/mplabx:tools-plugins-available](https://microchipdeveloper.com/mplabx:tools-plugins-available)
  
 2.	To establish serial communication with the host PC, connect a micro-USB cable between the host PC and the MCLV-48V-300W Inverter Board (connector J16). This interface is also used for programming.
 
@@ -213,12 +213,12 @@ Follow below instructions step by step to setup and run the motor control demo a
 
  
 
-4. Open the X2C window by selecting <span style="font-family:Courier New; font-size:2;">Tools>Embedded>X2CScope.</span></p>
+4. Open the X2C-Scope window by selecting <span style="font-family:Courier New; font-size:;">Tools>Embedded>X2CScope.</span></p>
       <p align="left">
        <img  src="images/x2cselection.png"></p>
  
 
-5. Open the X2CScope Configuration window and in <b>“Select project”</b> menu, select <b>pmsm</b> project as shown.
+5. Open the X2C-Scope Configuration window and in <b>“Select project”</b> menu, select <b>pmsm</b> project as shown.
     <p align="left">
     <img  src="images/x2cprojectselection.png"></p>
 
@@ -249,7 +249,7 @@ To view data plots continuously, uncheck<span style="font-family:Courier New; fo
     <p align="left">
     <img  src="images/x2cdatapointselection.png"></p>
 
-11.	Click on SAMPLE, then X2C scope window shows variables in real time, which is updated automatically.
+11.	Click on SAMPLE, then X2C-Scope window shows variables in real time, which is updated automatically.
      <p align="left">
      <img  src="images/x2csample.png"></p>
  
