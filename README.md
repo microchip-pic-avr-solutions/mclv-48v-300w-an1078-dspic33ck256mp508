@@ -50,7 +50,7 @@ To clone or download this application from Github, go to the [main page of this 
     <img  src="images/dimconnected.PNG"></p>
 
 
-3. <p style='text-align: justify;'> Connect the three phase wires from the motor to PHA, PHB, and PHC terminals of connector J14(there is no specific order), provided on the MCLV-48V-300W Inverter Board.</p>
+3. <p style='text-align: justify;'> Connect the three phase wires from the motor to PHA, PHB, and PHC terminals of connector J14(there is no specific order) provided on the MCLV-48V-300W Inverter Board.</p>
     <p align="left">
       <img  src="images/motorconnection.png"></p>
 
