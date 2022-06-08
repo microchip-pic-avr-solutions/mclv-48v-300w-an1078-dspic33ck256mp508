@@ -65,7 +65,7 @@ To clone or download this application from Github, go to the [main page of this 
       <p align="left">
      <img  src="images/mclvpkob4.png"></p>
 
- 6.	<p style='text-align: justify;'>6.	Alternatively, connect the Microchip programmer/debugger MPLAB PICkit 4 In-Circuit Debugger to the ICSP header J9 of the MCLV-48V-300W Inverter Board as shown below and to the Host PC used for programming the device. Ensure that PICkit 4 is oriented correctly before proceeding.</p> 
+ 6.	<p style='text-align: justify;'>	Alternatively, connect the Microchip programmer/debugger MPLAB PICkit 4 In-Circuit Debugger to the ICSP header J9 of the MCLV-48V-300W Inverter Board as shown below and to the Host PC used for programming the device. Ensure that PICkit 4 is oriented correctly before proceeding.</p> 
 
       <p align="left">
        <img  src="images/mclvprogramming.PNG"></p>
@@ -154,12 +154,12 @@ Follow below instructions step by step to setup and run the motor control demo a
     In the <b><i>‘Conf: [default]’</i></b> category window: 
     <p style='text-align: justify;'>
 
-   - Select the specific Compiler Toolchain from the available list of compilers. Please ensure MPLAB® XC16 Compiler supports the device dsPIC33CK256MP508.In this case, “XC16(v1.70)” is selected.
+ - Select the specific Compiler Toolchain from the available list of compilers. Please ensure MPLAB® XC16 Compiler supports the device dsPIC33CK256MP508.In this case, “XC16(v1.70)” is selected.
       <p style='text-align: justify;'>
-   - Select the Hardware Tool to be used for programming and debugging. 
+ - Select the Hardware Tool to be used for programming and debugging. 
        <p style='text-align: justify;'>
-   -	Select the specific Device Family Pack (DFP) from the available list of Packs. In this case, “dsPIC33CK-MP_DFP 1.6.176” is selected.     
-    - After selecting Hardware Tool and Compiler Toolchain, click button <b>Apply</b>
+-	Select the specific Device Family Pack (DFP) from the available list of Packs. In this case, “dsPIC33CK-MP_DFP 1.6.176” is selected.     
+ -   After selecting Hardware Tool and Compiler Toolchain, click button <b>Apply</b>
         <p align="left">
         <img  src="images/projectpropertiessettings.png"></p>
 
