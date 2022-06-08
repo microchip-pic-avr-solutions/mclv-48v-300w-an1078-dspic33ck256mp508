@@ -103,7 +103,7 @@ The firmware version needed for the demonstration is mentioned under the [Motor 
 This firmware is implemented to work on Microchip’s 16-bit Digital signal controller (dsPIC® DSC) dsPIC33CK256MP508. 
 For more information, see the dsPIC33CK256MP508 Family datasheet (DS70005349).</p>
 <p style='text-align: justify;'>
-The Motor Control Demo application uses push button to start or stop the motor and poten-tiometer to vary speed of the motor.This Motor Control Demo Application configures and uses peripherals like PWM, ADC, UART etc.</p>
+The Motor Control Demo application uses push button to start or stop the motor and potentiometer to vary speed of the motor.This Motor Control Demo Application configures and uses peripherals like PWM, ADC, UART etc.</p>
 
 <p style='text-align: justify;'>
 
@@ -145,12 +145,12 @@ Follow below instructions step by step to setup and run the motor control demo a
    
    
 > **_NOTE:_**
->The motor phase currents can be reconstructed from the DC Bus current by appropriately sampling it during the PWM switching period, called a single-shunt reconstruction algorithm. The firmware can be configured to demonstrate the single shunt reconstruction algorithm by defining the macro <span style="font-family:Courier New; font-size:1;">‘SINGLE_SHUNT’</span> in the header file <span style="font-family:Courier New; font-size:;"> userparams.h </span><br>
+>The motor phase currents can be reconstructed from the DC Bus current by appropriately sampling it during the PWM switching period, called a single-shunt reconstruction algorithm. The firmware can be configured to demonstrate the single shunt reconstruction algorithm by defining the macro<span style="font-family:Courier New; font-size:;">‘SINGLE_SHUNT’</span> in the header file <span style="font-family:Courier New; font-size:;"> userparams.h </span><br>
 >For additional information, refer to Microchip application note <b>AN1299, “Single-Shunt Three-Phase Current Reconstruction Algorithm for Sensorless FOC of a PMSM.”</b> <br>
 >By default, the firmware uses phase currents measured across the phase shunt resistors on two of the half-bridges of the three-phase inverter (‘dual shunt configuration’) to implement FOC.
 
 
-4. Right click on the project <i>pmsm.X</i> and select “Properties”  to open its Project Properties Dialog.Click the “Conf: [default]” category to reveal the general project configuration infor-mation. The development tools used for testing the firmware are listed in the section [2.2 Software Tools Used for Testing the firmware](#22-software-tools-used-for-testing-the-firmware).
+4. Right click on the project <i>pmsm.X</i> and select “Properties”  to open its Project Properties Dialog.Click the “Conf: [default]” category to reveal the general project configuration information. The development tools used for testing the firmware are listed in the section [2.2 Software Tools Used for Testing the firmware](#22-software-tools-used-for-testing-the-firmware).
    <p style='text-align: justify;'>
     In the <b><i>‘Conf: [default]’</i></b> category window: 
     <p style='text-align: justify;'>
@@ -164,7 +164,7 @@ Follow below instructions step by step to setup and run the motor control demo a
         <p align="left">
         <img  src="images/projectpropertiessettings.png"></p>
 
-5. <p style='text-align: justify;'> Ensure that the checkbox <b>“Load symbols when programming or building for pro-duction (slows process)”</b> is checked, which is under the “Loading” category of the Project Properties window.</p>        
+5. <p style='text-align: justify;'> Ensure that the checkbox <b>“Load symbols when programming or building for production (slows process)”</b> is checked, which is under the “Loading” category of the Project Properties window.</p>        
         
       <p align="left">
       <img  src="images/loadvariables.png"></p>
