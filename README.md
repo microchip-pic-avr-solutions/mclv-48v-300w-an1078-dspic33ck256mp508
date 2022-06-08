@@ -111,7 +111,7 @@ For more details refer Microchip Application note AN1078 “Sensorless Field Ori
 
 > **_NOTE:_**
 > The project may not build correctly in Windows OS if Maximum path length of any source file in the project is more than 260 characters. In case absolute path is exceeding or nearing maximum length, do any (or both) of the following:
- > - 	Shorten the directory name containing the firmware used in this demonstration. If you renamed the directory, consider the new name while reading the instructions provided in the upcoming sections of the document.
+> - Shorten the directory name containing the firmware used in this demonstration. If you renamed the directory, consider the new name while reading the instructions provided in the upcoming sections of the document.
 > - Place firmware in a location, such that absolute path length of each file included in the projects does not exceed the Maximum Path length specified. 
 Refer to MPLAB X IDE help topic <i>“Path, File, and Folder Name Restrictions”</i> for details.
 
