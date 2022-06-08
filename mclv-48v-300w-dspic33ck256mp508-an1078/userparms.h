@@ -85,7 +85,7 @@ controllers, tuning mode will disable the speed PI controller */
 #undef TORQUE_MODE
 
 /* undef to work with dual Shunt  */    
-#define SINGLE_SHUNT  
+#undef SINGLE_SHUNT  
     
 /* undef to work with External Op-Amp*/
 #define INTERNAL_OPAMP_CONFIG
