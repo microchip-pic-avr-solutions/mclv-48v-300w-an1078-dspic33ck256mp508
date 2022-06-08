@@ -4,8 +4,7 @@
 
 ## 1. INTRODUCTION
 <p style='text-align: justify;'>
-This document describes the setup requirements for running the Sensorless FOC algorithm with a Sliding Mode Observer, which is referenced in AN1078 “Sensorless Field Oriented Control of a PMSM” and the three phase current reconstruction from DC bus current algorithm is also implemented in this which is referenced in AN1299 “Single-Shunt Three-Phase Current Reconstruction Algorithm for
-Sensorless FOC of a PMSM” using a MCLV-48V-300W Inverter Board and dsPIC33CK256MP508 Motor Control Dual In-line Module (DIM).</p>
+This document describes the setup requirements for running the Sensorless FOC algorithm using a Sliding Mode Observer, which is referenced in AN1078 “Sensorless Field Oriented Control of a PMSM” using a MCLV-48V-300W Inverter Board and dsPIC33CK256MP508 Motor Control Dual In-line Module (DIM).</p>
 
 
 
