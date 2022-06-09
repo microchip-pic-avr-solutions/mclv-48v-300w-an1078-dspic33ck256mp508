@@ -34,9 +34,9 @@ To clone or download this application from Github, go to the [main page of this 
 ## 3. HARDWARE SETUP
 <p style='text-align: justify;'>This section describes hardware setup required for the demonstration.</p>
 
-1. <p style='text-align: justify;'> Motor currents are amplified on the MCLV-48V-300W Inverter Board; it can also be amplified by the amplifiers internal to the dsPIC33CK256MP508 populated on the DIM. By default, the firmware and DIM are configured to sample and convert internal amplifier outputs ('internal Op-Amp configuration'), measuring the motor currents needed for implementing FOC.</p>
+1. <p style='text-align: justify;'> Motor currents are amplified on the MCLV-48V-300W Inverter Board; it can also be amplified by the amplifiers internal to the dsPIC33CK256MP508 populated on the DIM. By default, the firmware and DIM are configured to sample and convert internal amplifier outputs ('internal Op Amp configuration'), measuring the motor currents needed for implementing FOC.</p>
 
-     <p style='text-align: justify;'> The Table-1 summarizes the resistors to be populated and removed to convert the DIM from internal Op-Amp configuration to external Op-Amp configuration or vice versa.</p>
+     <p style='text-align: justify;'> The Table-1 summarizes the resistors to be populated and removed to convert the DIM from internal Op Amp configuration to external Op Amp configuration or vice versa.</p>
 
     <p align="left" >
      <img  src="images/Tableopamp.png"></p>
