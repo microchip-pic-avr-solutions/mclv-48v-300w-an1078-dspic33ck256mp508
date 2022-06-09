@@ -10,11 +10,11 @@
       "shortDescription":"Sensorless Field Oriented Control of a PMSM with sliding mode observer",
       "ide":{
          "name":"MPLABX",
-         "semverRange":">=5.40.0"
+         "semverRange":">=5.50.0"
       },
       "compiler":{
          "name":"XC16",
-         "semverRange":">=1.50.0"
+         "semverRange":">=1.70.0"
       },
       "dfp":{
          "name":"dsPIC33CK-MP_DFP",

@@ -34,12 +34,12 @@ To clone or download this application from Github, go to the [main page of this 
 ## 3. HARDWARE SETUP
 <p style='text-align: justify;'>This section describes hardware setup required for the demonstration.</p>
 
-1. <p style='text-align: justify;'> Motor currents are amplified on the MCLV-48V-300W Inverter Board; it can also be amplified by the amplifiers internal to the dsPIC33CK256MP508 populated on the DIM. By default, the firmware and DIM are configured to sample and convert internal amplifier outputs ('internal op-amp configuration'), measuring the motor currents needed for implementing FOC.</p>
+1. <p style='text-align: justify;'> Motor currents are amplified on the MCLV-48V-300W Inverter Board; it can also be amplified by the amplifiers internal to the dsPIC33CK256MP508 populated on the DIM. By default, the firmware and DIM are configured to sample and convert internal amplifier outputs ('internal Op Amp configuration'), measuring the motor currents needed for implementing FOC.</p>
 
-     <p style='text-align: justify;'> The Table-1 summarizes the resistors to be populated and removed to convert the DIM from internal op-amp configuration to external op-amp configuration or vice versa.</p>
+     <p style='text-align: justify;'> The Table-1 summarizes the resistors to be populated and removed to convert the DIM from internal Op Amp configuration to external Op Amp configuration or vice versa.</p>
 
-<p align="left" >
- <img  src="images/Tableopamp.png"></p>
+    <p align="left" >
+     <img  src="images/Tableopamp.png"></p>
 
 
 
@@ -50,7 +50,7 @@ To clone or download this application from Github, go to the [main page of this 
     <img  src="images/dimconnected.PNG"></p>
 
 
-3. <p style='text-align: justify;'> Connect the three phase wires from the motor to PHA, PHB, and PHC terminals of connector J14(there is no specific order), provided on the MCLV-48V-300W Inverter Board.</p>
+3. <p style='text-align: justify;'> Connect the three phase wires from the motor to PHA, PHB, and PHC terminals of connector J14(there is no specific order) provided on the MCLV-48V-300W Inverter Board.</p>
     <p align="left">
       <img  src="images/motorconnection.png"></p>
 
@@ -59,13 +59,13 @@ To clone or download this application from Github, go to the [main page of this 
       <img  src="images/mclvpower.png"></p>
  
 
- 5.	<p style='text-align: justify;'>The board has an onboard programmer ‘PICkit™ On Board (PKOBv4)”, which can be used for programming or debugging the dsPIC33CK256MP508. To use an on-board programmer, connect a micro-USB cable between Host PC and Connector J16 provided on the MCLV-48V-300W Inverter Board.</p>
+ 5.	<p style='text-align: justify;'>The board has an onboard programmer ‘PICkit™ On Board (PKoB4)’ , which can be used for programming or debugging the dsPIC33CK256MP508. To use an on-board programmer, connect a micro-USB cable between Host PC and Connector J16 provided on the MCLV-48V-300W Inverter Board.</p>
 
 
       <p align="left">
      <img  src="images/mclvpkob4.png"></p>
 
- 6.	<p style='text-align: justify;'>6.	Alternatively, connect the Microchip programmer/debugger MPLAB PICkit 4 In-Circuit Debugger to the ICSP header J9 of the MCLV-48V-300W Inverter Board as shown below and to the Host PC used for programming the device. Ensure that PICkit 4 is oriented correctly before proceeding.</p> 
+ 6.	<p style='text-align: justify;'>Alternatively, the device can also be programmed using the programmer/debugger (MPLAB® PICkit™ 4 In-Circuit Debugger - PG164140) by interfacing it through connector J9 of the MCLV-48V-300W Inverter Board as shown below. Ensure that the programmer is oriented correctly before proceeding.</p> 
 
       <p align="left">
        <img  src="images/mclvprogramming.PNG"></p>
@@ -75,7 +75,7 @@ To clone or download this application from Github, go to the [main page of this 
 ## 4. SOFTWARE SETUP AND RUN
 ### 4.1 Setup: MPLAB X IDE and MPLAB XC16 Compiler
 
-Install MPLAB X IDE and MPLAB XC16 Compiler versions that support the device dsPIC33CK256MP508 and PKOBv4. The MPLAB X IDE, MPLAB XC16 Compiler, and X2C-Scope plug-in used for testing the firmware are mentioned in the [Motor Control Application Firmware Required for the Demonstration](#21-motor-control-application-firmware-required-for-the-demonstration) section. To get help on  
+Install MPLAB X IDE and MPLAB XC16 Compiler versions that support the device dsPIC33CK256MP508 and PKoBv4. The MPLAB X IDE, MPLAB XC16 Compiler, and X2C-Scope plug-in used for testing the firmware are mentioned in the [Motor Control Application Firmware Required for the Demonstration](#21-motor-control-application-firmware-required-for-the-demonstration) section. To get help on  
 
 - MPLAB X IDE installation, refer [link](https://microchipdeveloper.com/mplabx:installation)
 - MPLAB XC16 Compiler installation steps, refer [link](https://microchipdeveloper.com/xc16:installation)
@@ -107,11 +107,11 @@ The Motor Control Demo application uses push button to start or stop the motor a
 
 <p style='text-align: justify;'>
 
-For more details refer Microchip Application note AN1078 “Sensorless Field Oriented Control of a PMSM” and AN1299 “Single-Shunt Three-Phase Current Reconstruction Algorithm for Sensorless FOC of a PMSM” available at [Microchip web site](https://www.microchip.com/). </p>
+For more details refer Microchip Application note AN1078 “Sensorless Field Oriented Control of a PMSM” available at [Microchip web site](https://www.microchip.com/). </p>
 
 > **_NOTE:_**
 > The project may not build correctly in Windows OS if Maximum path length of any source file in the project is more than 260 characters. In case absolute path is exceeding or nearing maximum length, do any (or both) of the following:
- > - 	Shorten the directory name containing the firmware used in this demonstration. If you renamed the directory, consider the new name while reading the instructions provided in the upcoming sections of the document.
+> - Shorten the directory name containing the firmware used in this demonstration. If you renamed the directory, consider the new name while reading the instructions provided in the upcoming sections of the document.
 > - Place firmware in a location, such that absolute path length of each file included in the projects does not exceed the Maximum Path length specified. 
 Refer to MPLAB X IDE help topic <i>“Path, File, and Folder Name Restrictions”</i> for details.
 
@@ -132,12 +132,11 @@ Follow below instructions step by step to setup and run the motor control demo a
 	
 3. <p style='text-align: leftjustify;'> Open <span style="font-family:Courier New; font-size:;">userparams.h </span>(under<span style="font-family:Courier New; font-size:;"> pmsm.X -> headerfiles)</span> in the project <span style="font-family:Courier New; font-size:;">pmsm.X</span> </p>
      <p style='text-align: leftjustify;'>
-      - Ensure that <span style="font-family:Courier New; font-size:;">TUNING, OPEN_LOOP_FUNCTIONING, and TORQUE_MODE </span>are not defined.
-      
+- Ensure that <span style="font-family:Courier New; font-size:;">TUNING, OPEN_LOOP_FUNCTIONING, and TORQUE_MODE </span>are not defined.
       <p align="left"><img  src="images/configParam.png"></p>
-    - When internal amplifiers are used for current amplification (referred as <b>‘Internal Op Amp configuration’</b>) then<b> define</b> <span style="font-family:Courier New; font-size:;">INTERNAL_OPAMP_CONFIG</span>.
+- When internal amplifiers are used for current amplification (referred as <b>‘internal Op Amp configuration’</b>) then<b> define</b> <span style="font-family:Courier New; font-size:;">INTERNAL_OPAMP_CONFIG</span>.
         <p align="left"> <img  src="images/internalopampconfig.png"></p>
-       Otherwise if external amplifiers are used for current amplification (referred as <b>‘External Op Amp Configuration’</b>) then <b>undefine </b>the macro <span style="font-family:Courier New; font-size:;">INTERNAL_OPAMP_CONFIG</span> in <span style="font-family:Courier New; font-size:;"> userparams.h.</span></p>
+       Otherwise if external amplifiers are used for current amplification (referred as <b>‘external Op Amp configuration’</b>) then <b>undefine </b>the macro <span style="font-family:Courier New; font-size:;">INTERNAL_OPAMP_CONFIG</span> in <span style="font-family:Courier New; font-size:;"> userparams.h.</span></p>
         <p align="left">
       <img  src="images/externalopampconfig.png"></p>
       
@@ -155,12 +154,12 @@ Follow below instructions step by step to setup and run the motor control demo a
     In the <b><i>‘Conf: [default]’</i></b> category window: 
     <p style='text-align: justify;'>
 
-   - Select the specific Compiler Toolchain from the available list of compilers. Please ensure MPLAB® XC16 Compiler supports the device dsPIC33CK256MP508.In this case, “XC16(v1.70)” is selected.
+ - Select the specific Compiler Toolchain from the available list of compilers. Please ensure MPLAB® XC16 Compiler supports the device dsPIC33CK256MP508.In this case, “XC16(v1.70)” is selected.
       <p style='text-align: justify;'>
-   - Select the Hardware Tool to be used for programming and debugging. 
+ - Select the Hardware Tool to be used for programming and debugging. 
        <p style='text-align: justify;'>
-   -	Select the specific Device Family Pack (DFP) from the available list of Packs. In this case, “dsPIC33CK-MP_DFP 1.6.176” is selected.     
-    - After selecting Hardware Tool and Compiler Toolchain, click button <b>Apply</b>
+-	Select the specific Device Family Pack (DFP) from the available list of Packs. In this case, “dsPIC33CK-MP_DFP 1.6.176” is selected.     
+ -   After selecting Hardware Tool and Compiler Toolchain, click button <b>Apply</b>
         <p align="left">
         <img  src="images/projectpropertiessettings.png"></p>
 
@@ -178,7 +177,7 @@ Follow below instructions step by step to setup and run the motor control demo a
      <img  src="images/led.png"></p>
 
 
-8. <p style='text-align: justify;'> 	Run or stop the motor by pressing the push button <b>SW1</b>. The motor should start spinning smoothly in one direction in the ‘Normal Speed Range.’ Ensure that the motor is spinning smoothly without any vibration. The LED LD2 (‘LED1’) is turned ON to show the button is pressed to start the motor </p>
+8. <p style='text-align: justify;'> 	Run or stop the motor by pressing the push button <b>SW1</b>. The motor should start spinning smoothly in one direction in the ‘Normal Speed Range’. Ensure that the motor is spinning smoothly without any vibration. The LED LD2 (‘LED1’) is turned ON to show the button is pressed to start the motor </p>
      <p align="left">
      <img  src="images/pushbuttons.png"></p>
  
