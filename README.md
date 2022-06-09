@@ -18,7 +18,7 @@ To clone or download this application from Github, go to the [main page of this 
 
 - MPLAB® X IDE v5.50 
 - MPLAB® XC16 Compiler v1.70
-- MPLAB® X IDE Plugin: X2C-Scope v1.30 
+- MPLAB® X IDE Plugin: X2C-Scope v1.3.0 
 - DFP: dsPIC33CK-MP_DFP v1.6.176
 > **_NOTE:_**
 >The software used for testing the firmware prior to release is listed above. It is recommended to use the version listed above or later versions for building the firmware.
