@@ -10,7 +10,7 @@
       "shortDescription":"Sensorless Field Oriented Control of a PMSM with sliding mode observer",
       "ide":{
          "name":"MPLABX",
-         "semverRange":">=5.40.0"
+         "semverRange":">=5.50.0"
       },
       "compiler":{
          "name":"XC16",
