@@ -34,12 +34,12 @@ To clone or download this application from Github, go to the [main page of this 
 ## 3. HARDWARE SETUP
 <p style='text-align: justify;'>This section describes hardware setup required for the demonstration.</p>
 
-1. <p style='text-align: justify;'> Motor currents are amplified on the MCLV-48V-300W Inverter Board; it can also be amplified by the amplifiers internal to the dsPIC33CK256MP508 populated on the DIM. By default, the firmware and DIM are configured to sample and convert internal amplifier outputs ('internal op-amp configuration'), measuring the motor currents needed for implementing FOC.</p>
+1. <p style='text-align: justify;'> Motor currents are amplified on the MCLV-48V-300W Inverter Board; it can also be amplified by the amplifiers internal to the dsPIC33CK256MP508 populated on the DIM. By default, the firmware and DIM are configured to sample and convert internal amplifier outputs ('internal Op-Amp configuration'), measuring the motor currents needed for implementing FOC.</p>
 
-     <p style='text-align: justify;'> The Table-1 summarizes the resistors to be populated and removed to convert the DIM from internal op-amp configuration to external op-amp configuration or vice versa.</p>
+     <p style='text-align: justify;'> The Table-1 summarizes the resistors to be populated and removed to convert the DIM from internal Op-Amp configuration to external Op-Amp configuration or vice versa.</p>
 
-<p align="left" >
- <img  src="images/Tableopamp.png"></p>
+    <p align="center" >
+     <img  src="images/Tableopamp.png"></p>
 
 
 
@@ -134,9 +134,9 @@ Follow below instructions step by step to setup and run the motor control demo a
      <p style='text-align: leftjustify;'>
 - Ensure that <span style="font-family:Courier New; font-size:;">TUNING, OPEN_LOOP_FUNCTIONING, and TORQUE_MODE </span>are not defined.
       <p align="left"><img  src="images/configParam.png"></p>
-- When internal amplifiers are used for current amplification (referred as <b>‘internal op amp configuration’</b>) then<b> define</b> <span style="font-family:Courier New; font-size:;">INTERNAL_OPAMP_CONFIG</span>.
+- When internal amplifiers are used for current amplification (referred as <b>‘internal Op Amp configuration’</b>) then<b> define</b> <span style="font-family:Courier New; font-size:;">INTERNAL_OPAMP_CONFIG</span>.
         <p align="left"> <img  src="images/internalopampconfig.png"></p>
-       Otherwise if external amplifiers are used for current amplification (referred as <b>‘external op amp Configuration’</b>) then <b>undefine </b>the macro <span style="font-family:Courier New; font-size:;">INTERNAL_OPAMP_CONFIG</span> in <span style="font-family:Courier New; font-size:;"> userparams.h.</span></p>
+       Otherwise if external amplifiers are used for current amplification (referred as <b>‘external Op Amp configuration’</b>) then <b>undefine </b>the macro <span style="font-family:Courier New; font-size:;">INTERNAL_OPAMP_CONFIG</span> in <span style="font-family:Courier New; font-size:;"> userparams.h.</span></p>
         <p align="left">
       <img  src="images/externalopampconfig.png"></p>
       
