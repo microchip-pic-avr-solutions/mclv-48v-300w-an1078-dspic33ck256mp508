@@ -177,7 +177,7 @@ Follow below instructions step by step to setup and run the motor control demo a
      <img  src="images/led.png"></p>
 
 
-8. <p style='text-align: justify;'> 	Run or stop the motor by pressing the push button <b>SW1</b>. The motor should start spinning smoothly in one direction in the ‘Normal Speed Range’. Ensure that the motor is spinning smoothly without any vibration. The LED LD2 (‘LED1’) is turned ON to show the button is pressed to start the motor </p>
+8. <p style='text-align: justify;'> 	Run or stop the motor by pressing the push button <b>SW1</b>. The motor should start spinning smoothly in one direction in the ‘Normal Speed Range’. Ensure that the motor is spinning smoothly without any vibration. The LED <b>LD3 (‘LED2’)</b> is turned ON to show the button is pressed to start the motor </p>
      <p align="left">
      <img  src="images/pushbuttons.png"></p>
  

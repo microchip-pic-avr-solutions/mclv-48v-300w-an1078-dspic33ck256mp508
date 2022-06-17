@@ -215,7 +215,6 @@ void MapGPIOHWFunction(void)
 #endif    
 
     // Potentiometer #1 input - used as Speed Reference
-    // Potentiometer #1 input - used as Speed Reference
     ANSELCbits.ANSELC6= 1;
     TRISCbits.TRISC6 = 1;   // PIN30: AN17/ANN1/IBIAS1/RP54/PMD12/PMA12/RC6
     /*TEMPERATURE*/
@@ -233,8 +232,8 @@ void MapGPIOHWFunction(void)
     // PWM1H : PIN #1  RP46/PWM1H/PMD5/RB14
     // PWM2L : PIN #80  RP45/PWM2L/PMD4/RB13
     // PWM2H : PIN #78  TDI/RP44/PWM2H/PMD3/RB12
-    // PWM4L : PIN #76  TCK/RP43/PWM3L/PMD2/RB11
-    // PWM4H : PIN #75  TMS/RP42/PWM3H/PMD1/RB10
+    // PWM3L : PIN #76  TCK/RP43/PWM3L/PMD2/RB11
+    // PWM3H : PIN #75  TMS/RP42/PWM3H/PMD1/RB10
                       
     TRISBbits.TRISB14 = 0 ;          
     TRISBbits.TRISB15 = 0 ;         
