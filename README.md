@@ -18,7 +18,7 @@ To clone or download this application from Github, go to the [main page of this 
 
 - MPLAB® X IDE v5.50 
 - MPLAB® XC16 Compiler v1.70
-- MPLAB® X IDE Plugin: X2C-Scope v1.30 
+- MPLAB® X IDE Plugin: X2C-Scope v1.3.0 
 - DFP: dsPIC33CK-MP_DFP v1.6.176
 > **_NOTE:_**
 >The software used for testing the firmware prior to release is listed above. It is recommended to use the version listed above or later versions for building the firmware.
@@ -50,7 +50,7 @@ To clone or download this application from Github, go to the [main page of this 
     <img  src="images/dimconnected.PNG"></p>
 
 
-3. <p style='text-align: justify;'> Connect the three phase wires from the motor to PHA, PHB, and PHC terminals of connector J14(there is no specific order) provided on the MCLV-48V-300W Inverter Board.</p>
+3. <p style='text-align: justify;'> Connect the three phase wires from the motor to PHA, PHB, and PHC terminals of connector J4(there is no specific order) provided on the MCLV-48V-300W Inverter Board.</p>
     <p align="left">
       <img  src="images/motorconnection.png"></p>
 
@@ -177,7 +177,7 @@ Follow below instructions step by step to setup and run the motor control demo a
      <img  src="images/led.png"></p>
 
 
-8. <p style='text-align: justify;'> 	Run or stop the motor by pressing the push button <b>SW1</b>. The motor should start spinning smoothly in one direction in the ‘Normal Speed Range’. Ensure that the motor is spinning smoothly without any vibration. The LED LD2 (‘LED1’) is turned ON to show the button is pressed to start the motor </p>
+8. <p style='text-align: justify;'> 	Run or stop the motor by pressing the push button <b>SW1</b>. The motor should start spinning smoothly in one direction in the ‘Normal Speed Range’. Ensure that the motor is spinning smoothly without any vibration. The LED <b>LD3 (‘LED2’)</b> is turned ON to show the button is pressed to start the motor </p>
      <p align="left">
      <img  src="images/pushbuttons.png"></p>
  
