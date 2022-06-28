@@ -134,6 +134,7 @@ Follow below instructions step by step to setup and run the motor control demo a
      <p style='text-align: leftjustify;'>
 - Ensure that <span style="font-family:Courier New; font-size:;">TUNING, OPEN_LOOP_FUNCTIONING, and TORQUE_MODE </span>are not defined.
       <p align="left"><img  src="images/configParam.png"></p>
+      <p align="left"><img  src="images/tuning.png"></p> 
 - When internal amplifiers are used for current amplification (referred as <b>‘internal Op Amp configuration’</b>) then<b> define</b> <span style="font-family:Courier New; font-size:;">INTERNAL_OPAMP_CONFIG</span>.
         <p align="left"> <img  src="images/internalopampconfig.png"></p>
        Otherwise if external amplifiers are used for current amplification (referred as <b>‘external Op Amp configuration’</b>) then <b>undefine </b>the macro <span style="font-family:Courier New; font-size:;">INTERNAL_OPAMP_CONFIG</span> in <span style="font-family:Courier New; font-size:;"> userparams.h.</span></p>
