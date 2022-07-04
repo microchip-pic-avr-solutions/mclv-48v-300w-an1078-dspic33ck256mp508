@@ -63,6 +63,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
+				sh "git submodule update --init"
             }
         }
         
@@ -164,7 +165,8 @@ pipeline {
                         bitbucketUrl: "${env.BITBUCKET_SOURCE_URL}",
                         deployBranchList: "${env.DEPLOY_BRANCH_LIST}",
                         deployExcludeFileList: "${env.DEPLOY_EXCLUDE_FOLDER_FILE_LIST}",
-                        githubOrgName: "${env.GITHUB_PRODUCTION_ORGANIZATION}"
+                        githubOrgName: "${env.GITHUB_PRODUCTION_ORGANIZATION}",
+						includeSubmoduleCode: "true"
                     )
                 }
             }
